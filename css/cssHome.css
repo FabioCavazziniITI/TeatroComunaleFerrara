@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 1920px;
+    height: auto;;
+    background-color: white;
+}
+
+.logo{
+    margin-left: 10px;
+}
+
+.img_logo{
+    width: 20px;
+    height: 15%;
+    border-radius: 10px;
+}
