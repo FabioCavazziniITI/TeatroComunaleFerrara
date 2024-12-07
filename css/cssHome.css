@@ -76,7 +76,6 @@
 }
 
 /* SLIDE + TESTO */
-/* SLIDE + TESTO */
 .slide_text {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Due colonne di uguale larghezza */
