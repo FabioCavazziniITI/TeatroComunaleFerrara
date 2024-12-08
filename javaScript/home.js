@@ -48,8 +48,3 @@ function plusSlides(n) {
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
-
-// All'avvio della pagina, mostra la prima immagine e il testo
-document.addEventListener("DOMContentLoaded", function() {
-    showSlides(slideIndex); // Mostra la prima immagine e testo al caricamento
-});
