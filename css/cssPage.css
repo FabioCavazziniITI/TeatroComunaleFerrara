@@ -75,6 +75,126 @@
     text-decoration: underline;
 }
 
+/* CONTENUTO */
+.prenotazione {
+    width: 100%;
+    height: auto;
+    background-color: #F7F3E9;
+    padding-top: 10px;
+}
+
+.prenotazione p {
+    text-align: center;
+    font-size: 30pt;
+}
+
+.posti {
+    display: grid;
+    grid-template-columns: 50% 50%; /* Griglia divisa in due colonne */
+    padding-top: 15px;
+    padding-bottom: 40px;
+    justify-content: center;
+    background-color: #F7F3E9;
+    color: black;
+}
+
+.imgPosti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgPosti img {
+    max-width: 75%;
+    height: auto;
+    border-radius: 50px;
+}
+
+.textPrezzi {
+    font-size: 25pt;
+    margin-bottom: 20px;
+}
+
+.costi {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    justify-content: center;
+    background-color: #F7F3E9;
+    color: black;
+}
+
+.costi1, .costi2, .costi3 {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.costi1, .costi2 {
+    border-right: 2px solid black;
+}
+
+.costi b {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 5px;
+    font-style: oblique;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-offset: 10px
+}
+
+.costi p {
+    display: block;
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.costi .giallo {
+    color:#DAA520;
+    font-weight: bold;
+}
+
+.costi .blu_scuro {
+    color:#00008B;
+    font-weight: bold;
+}
+
+.costi .verde {
+    color: green;
+    font-weight: bold;
+}
+
+.costi .violetto {
+    color: #9370DB;
+    font-weight: bold;
+}
+
+.costi .rosso {
+    color: #B22222;
+    font-weight: bold;
+}
+
+.costi .blu {
+    color:#1C39BB;
+    font-weight: bold;
+}
+
+.costi .marrone {
+    color:#964B00;
+    font-weight: bold;
+}
+
+hr {
+    width: 90%;
+    height: 2px;
+    background-color: black;
+    border: none;
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
+
 /* FOOTER */
 .footer {
     display: grid;
