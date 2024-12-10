@@ -8,7 +8,6 @@
         </title>
     </head>
     <body>
-        <!--CONTENUTO-->
-        
+    	Ciao <?php echo ($_POST["nome "+"cognome"]);?>.<br>
     </body>
 </html>
