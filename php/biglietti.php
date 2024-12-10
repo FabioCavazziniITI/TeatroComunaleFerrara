@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="icon" href="https://www.teatrocomunaleferrara.it/wp-content/uploads/Teatro-comunale-di-Ferrara-logo-bianco.svg">
+        <link rel="icon" href="https://cdn.icon-icons.com/icons2/2869/PNG/512/order_confirmation_icon_181878.png">
         <link rel="stylesheet" type="text/css" href="../css/cssPHP.css" media="all">
         <title>
-            Teatro Comunale Ferrara
+            Conferma Ordine
         </title>
     </head>
     <body>
