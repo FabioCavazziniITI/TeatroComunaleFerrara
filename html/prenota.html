@@ -153,55 +153,53 @@
 
         <!--COMPRA BIGLIETTI-->
         <div class="biglietti">
-            <div class="formBiglietti">
-                <div class="formContainer">
-                    <form action="submit_ticket.php" method="post" class="ticketForm">
-                        <h2>
-                            Acquista i tuoi biglietti
-                        </h2>
-                
-                        <!-- Generalità del compratore -->
+            <div class="formContainer">
+                <form action="submit_ticket.php" method="post" class="ticketForm">
+                    <h2>Acquista ora i tuoi biglietti</h2>
+            
+                    <!-- Generalità del compratore -->
+                    <div class="inlineGroup">
                         <div class="formGroup">
                             <label for="nome">Nome:</label>
                             <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
                         </div>
-                
+            
                         <div class="formGroup">
                             <label for="cognome">Cognome:</label>
                             <input type="text" id="cognome" name="cognome" placeholder="Inserisci il tuo cognome" required>
                         </div>
-                
-                        <div class="formGroup">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
-                        </div>
-                
-                        <!-- Numero di posti -->
-                        <div class="formGroup">
-                            <label for="numeroPosti">Numero di posti:</label>
-                            <input type="number" id="numeroPosti" name="numeroPosti" min="1" max="4" value="1" required>
-                        </div>
-                
-                        <!-- Selezione della zona -->
-                        <div class="formGroup">
-                            <label for="zona">Zona preferita:</label>
-                            <select id="zona" name="zona" required>
-                                <option value="">-- Seleziona una zona --</option>
-                                <option value="platea">Platea</option>
-                                <option value="balcone1">Balcone 1° Piano</option>
-                                <option value="balcone2">Balcone 2° Piano</option>
-                                <option value="balcone3">Balcone 3° Piano</option>
-                                <option value="balcone4">Balcone 4° Piano</option>
-                                <option value="balcone5">Balcone 5° Piano</option>
-                            </select>
-                        </div>
-                
-                        <!-- Pulsante di invio -->
-                        <div class="formGroup">
-                            <button type="submit" class="submitButton">Acquista</button>
-                        </div>
-                    </form>
-                </div>                
+                    </div>
+            
+                    <div class="formGroup">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
+                    </div>
+            
+                    <!-- Numero di posti -->
+                    <div class="formGroup">
+                        <label for="numeroPosti">Numero di posti:</label>
+                        <input type="number" id="numeroPosti" name="numeroPosti" min="1" max="10" value="1" required>
+                    </div>
+            
+                    <!-- Selezione della zona -->
+                    <div class="formGroup">
+                        <label for="zona">Zona preferita:</label>
+                        <select id="zona" name="zona" required>
+                            <option value="">-- Seleziona una zona --</option>
+                            <option value="platea">Platea</option>
+                            <option value="balcone1">Balcone 1° Piano</option>
+                            <option value="balcone2">Balcone 2° Piano</option>
+                            <option value="balcone3">Balcone 3° Piano</option>
+                            <option value="balcone4">Balcone 4° Piano</option>
+                            <option value="balcone5">Balcone 5° Piano</option>
+                        </select>
+                    </div>
+            
+                    <!-- Pulsante di invio -->
+                    <div class="formGroup">
+                        <button type="submit" class="submitButton">Acquista</button>
+                    </div>
+                </form>
             </div>
         </div>
 
