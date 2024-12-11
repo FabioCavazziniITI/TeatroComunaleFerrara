@@ -80,20 +80,6 @@ a {
     text-decoration: underline;
 }
 
-/* CONTENUTO */
-.containerPHP {
-    width: 100%;
-    height: max-content;
-    background-color: #F7F3E9;
-    padding: 20px;
-}
-
-.containerPHP p {
-    font-size: 20pt;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-}
-
 /* FOOTER */
 .footer {
     display: grid;
