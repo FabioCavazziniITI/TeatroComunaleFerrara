@@ -80,6 +80,10 @@ a {
     text-decoration: underline;
 }
 
+.contenitorePHP {
+    padding: 20pt;
+}
+
 /* FOOTER */
 .footer {
     display: grid;
