@@ -370,6 +370,171 @@
                         break;
                     };
 
+                    //3° Piano | Galleria lato palco
+                    case "galleria3": {
+                        $prezzo = 38;
+                        $costoTOT = $nPosti * $prezzo;
+                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
+                                Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
+                        echo("<br><br>Di seguito il riepilogo dei dati inseriti consultabile anche su email:<br>");
+                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome<br>");
+                        echo ("<b>Email:</b> $email<br>");
+                        echo ("<b>Cellulare:</b> $cellulare<br>");
+                        echo ("<b>Zona scelta:</b> 3&deg; Piano | Galleria lato palco<br>");
+                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br><br>");
+                        echo ("Riceverai il riepilogo anche all'email indicata.");
+
+                        //email
+                        $subject = "Conferma Acquisto Biglietto Teatro Comunale Ferrara";
+                        $txt = "Ciao $nome $cognome,
+                                hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.
+
+                                Il prezzo totale da pagare ammonta a: € $costoTOT.
+
+                                Di seguito il riepilogo dei dati inseriti consultabile anche su email:
+                                - Nome Cognome: $nome $cognome
+                                - Email: $email
+                                - Cellulare: $cellulare
+                                - Zona scelta: 3° Piano | Galleria lato palco
+                                - Numero biglietti acquistati: $nPosti";
+                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        
+                        mail($email, $subject, $txt, $headers);
+                        break;
+                    };
+
+                    //3° Piano | Galleria laterale
+                    case "galleria3_1": {
+                        $prezzo = 40;
+                        $costoTOT = $nPosti * $prezzo;
+                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
+                                Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
+                        echo("<br><br>Di seguito il riepilogo dei dati inseriti consultabile anche su email:<br>");
+                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome<br>");
+                        echo ("<b>Email:</b> $email<br>");
+                        echo ("<b>Cellulare:</b> $cellulare<br>");
+                        echo ("<b>Zona scelta:</b> 3&deg; Piano | Galleria laterale<br>");
+                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br><br>");
+                        echo ("Riceverai il riepilogo anche all'email indicata.");
+
+                        //email
+                        $subject = "Conferma Acquisto Biglietto Teatro Comunale Ferrara";
+                        $txt = "Ciao $nome $cognome,
+                                hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.
+
+                                Il prezzo totale da pagare ammonta a: € $costoTOT.
+
+                                Di seguito il riepilogo dei dati inseriti consultabile anche su email:
+                                - Nome Cognome: $nome $cognome
+                                - Email: $email
+                                - Cellulare: $cellulare
+                                - Zona scelta: 3° Piano | Galleria laterale
+                                - Numero biglietti acquistati: $nPosti";
+                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        
+                        mail($email, $subject, $txt, $headers);
+                        break;
+                    };
+
+                    //3° Piano | Galleria centrale
+                    case "galleria3_2": {
+                        $prezzo = 42;
+                        $costoTOT = $nPosti * $prezzo;
+                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
+                                Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
+                        echo("<br><br>Di seguito il riepilogo dei dati inseriti consultabile anche su email:<br>");
+                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome<br>");
+                        echo ("<b>Email:</b> $email<br>");
+                        echo ("<b>Cellulare:</b> $cellulare<br>");
+                        echo ("<b>Zona scelta:</b> 3&deg; Piano | Galleria centrale<br>");
+                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br><br>");
+                        echo ("Riceverai il riepilogo anche all'email indicata.");
+
+                        //email
+                        $subject = "Conferma Acquisto Biglietto Teatro Comunale Ferrara";
+                        $txt = "Ciao $nome $cognome,
+                                hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.
+
+                                Il prezzo totale da pagare ammonta a: € $costoTOT.
+
+                                Di seguito il riepilogo dei dati inseriti consultabile anche su email:
+                                - Nome Cognome: $nome $cognome
+                                - Email: $email
+                                - Cellulare: $cellulare
+                                - Zona scelta: 3° Piano | Galleria centrale
+                                - Numero biglietti acquistati: $nPosti";
+                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        
+                        mail($email, $subject, $txt, $headers);
+                        break;
+                    };
+
+                    //4° Piano | Galleria lato palco
+                    case "galleria4": {
+                        $prezzo = 36;
+                        $costoTOT = $nPosti * $prezzo;
+                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
+                                Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
+                        echo("<br><br>Di seguito il riepilogo dei dati inseriti consultabile anche su email:<br>");
+                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome<br>");
+                        echo ("<b>Email:</b> $email<br>");
+                        echo ("<b>Cellulare:</b> $cellulare<br>");
+                        echo ("<b>Zona scelta:</b> 4&deg; Piano | Galleria lato palco<br>");
+                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br><br>");
+                        echo ("Riceverai il riepilogo anche all'email indicata.");
+
+                        //email
+                        $subject = "Conferma Acquisto Biglietto Teatro Comunale Ferrara";
+                        $txt = "Ciao $nome $cognome,
+                                hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.
+
+                                Il prezzo totale da pagare ammonta a: € $costoTOT.
+
+                                Di seguito il riepilogo dei dati inseriti consultabile anche su email:
+                                - Nome Cognome: $nome $cognome
+                                - Email: $email
+                                - Cellulare: $cellulare
+                                - Zona scelta: 4° Piano | Galleria lato palco
+                                - Numero biglietti acquistati: $nPosti";
+                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        
+                        mail($email, $subject, $txt, $headers);
+                        break;
+                    };
+
+                    //4° Piano | Galleria laterale
+                    case "galleria4_1": {
+                        $prezzo = 38;
+                        $costoTOT = $nPosti * $prezzo;
+                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
+                                Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
+                        echo("<br><br>Di seguito il riepilogo dei dati inseriti consultabile anche su email:<br>");
+                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome<br>");
+                        echo ("<b>Email:</b> $email<br>");
+                        echo ("<b>Cellulare:</b> $cellulare<br>");
+                        echo ("<b>Zona scelta:</b> 4&deg; Piano | Galleria laterale<br>");
+                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br><br>");
+                        echo ("Riceverai il riepilogo anche all'email indicata.");
+
+                        //email
+                        $subject = "Conferma Acquisto Biglietto Teatro Comunale Ferrara";
+                        $txt = "Ciao $nome $cognome,
+                                hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.
+
+                                Il prezzo totale da pagare ammonta a: € $costoTOT.
+
+                                Di seguito il riepilogo dei dati inseriti consultabile anche su email:
+                                - Nome Cognome: $nome $cognome
+                                - Email: $email
+                                - Cellulare: $cellulare
+                                - Zona scelta: 4° Piano | Galleria laterale
+                                - Numero biglietti acquistati: $nPosti";
+                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        
+                        mail($email, $subject, $txt, $headers);
+                        break;
+                    };
+
                     default: {
                         echo ("Zona inserita non presente.");
                         break;
