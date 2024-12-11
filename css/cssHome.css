@@ -240,3 +240,75 @@ a {
 .img_footer:hover {
     transform: scale(1.0);
 }
+
+@media (max-width: 768px) {
+    /* Header */
+    .header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .logo {
+        margin: 10px 0;
+    }
+
+    .name_sito {
+        font-size: 20pt;
+        text-align: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .nav ul li {
+        display: block;
+        text-align: center;
+    }
+
+    .nav ul li a {
+        font-size: 12pt;
+        padding: 10px;
+    }
+
+    /* Slide + Testo */
+    .slide_text {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+    }
+
+    .img_scroll {
+        height: auto;
+    }
+
+    /* GPS Section */
+    .gps {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .position .gps iframe {
+        max-width: 100%;
+        height: 300px;
+    }
+
+    /* Footer */
+    .footer {
+        grid-template-columns: 1fr;
+    }
+
+    .footer_div {
+        margin: 10px 0;
+    }
+    
+    .img_footer {
+        width: 100px;
+        height: auto;
+    }
+}
