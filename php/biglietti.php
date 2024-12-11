@@ -53,6 +53,7 @@
                 $nPosti		=	$_POST["numeroPosti"];
                 $zona		=	$_POST["zona"];
                 $costoTOT	=	0;
+                $prezzo		=	0;
                 
                 //saluto utente
                 echo ($nome). "&nbsp;";
@@ -67,22 +68,38 @@
                         echo "hai selezionato l'opzione divisoria per le varie zone.
                               &Egrave; necessario selezionare una delle zone presenti nel listino prezzi.";
                         break;
-                    }
+                    };
                     case "plateaA": {
                         $prezzo = 50;
                         $costoTOT = $nPosti * $prezzo;
-                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro comunale di Ferrara.<br><br>
-                                Di seguito il riepilogo dei dati inseriti:<br>");
-                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome,<br>");
-                        echo ("<b>Email:</b> $email,<br>");
-                        echo ("<b>Cellulare:</b> $cellulare,<br>");
-                        echo ("<b>Zona scelta:</b> Platea | file A-Q,<br>");
-                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br>");
+                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
+                                Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
+                        echo("<br><br>Di seguito il riepilogo dei dati inseriti consultabile anche su email:<br>");
+                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome<br>");
+                        echo ("<b>Email:</b> $email<br>");
+                        echo ("<b>Cellulare:</b> $cellulare<br>");
+                        echo ("<b>Zona scelta:</b> Platea | file A-Q<br>");
+                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br><br>");
+                        echo ("Riceverai il riepilogo anche all'email indicata.");
                         break;
-                    }
+                    };
+                    case "plateaI": {
+                        $prezzo = 45;
+                        $costoTOT = $nPosti * $prezzo;
+                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
+                                Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
+                        echo("<br><br>Di seguito il riepilogo dei dati inseriti consultabile anche su email:<br>");
+                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome<br>");
+                        echo ("<b>Email:</b> $email<br>");
+                        echo ("<b>Cellulare:</b> $cellulare<br>");
+                        echo ("<b>Zona scelta:</b> Platea | file R-V<br>");
+                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br><br>");
+                        echo ("Riceverai il riepilogo anche all'email indicata.");
+                        break;
+                    };
 
                     default: {
-                        echo "Zona non ancora inserita nel PHP.";
+                        echo ("Zona non ancora inserita nel PHP.");
                         break;
                     }
                 }
