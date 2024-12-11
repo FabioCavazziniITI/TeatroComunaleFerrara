@@ -88,6 +88,12 @@ a {
     padding: 20px;
 }
 
+.containerPHP p {
+    font-size: 20pt;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
 /* FOOTER */
 .footer {
     display: grid;
