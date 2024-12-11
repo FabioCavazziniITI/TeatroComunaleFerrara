@@ -43,21 +43,28 @@
         <div class="containerPHP">
             Ciao
             <?php
-                //saluto
-                echo ($_POST["nome"]). "&nbsp;";
-                echo ($_POST["cognome"]). ",<br>";
+            	$nome		=	$_POST["nome"];
+                $cognome	=	$_POST["cognome"];
+                $email		=	$_POST["email"];
+                $cellulare	=	$_POST["cellulare"];
+                $nPosti		=	$_POST["numeroPosti"];
+                $zona		=	$_POST["zona"];
+
+                //saluto utente
+                echo ($nome). "&nbsp;";
+                echo ($cognome). ",<br>";
                 
-                //stampa valore assunto da "zona"
-                //var_dump($_POST["zona"]);
+                //stampa valore assunto da dalla variabile $zona
+                //var_dump($zona);
                 
                 //cosa fare in base alla scelta zona
-                if (($_POST["zona"]) == "divisorio") {
+                if ($zona == "divisorio") {
                     echo ("Hai selezionato un divisore di zona.
                             &Egrave; necessario scegliere una delle zone <u>presenti</u> nel <b>listino prezzi</b>!");
                 }
                 
                 else {
-                    echo ("opzione non ancora inserita nel file PHP");
+                    echo ("zona scelta non ancora gestita nel file PHP");
                 }
             ?>
         </div>
