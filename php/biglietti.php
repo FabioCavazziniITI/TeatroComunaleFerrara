@@ -2,7 +2,11 @@
 <html>
     <head>
         <link rel="icon" href="https://www.teatrocomunaleferrara.it/wp-content/uploads/Teatro-comunale-di-Ferrara-logo-bianco.svg">
-        <link rel="stylesheet" type="text/css" href="../css/cssPHP.css" media="all">
+        <style>
+            * {
+                padding: 20px;
+            }
+        </style>
         <title>
             Teatro Comunale Ferrara
         </title>
@@ -36,6 +40,7 @@
                         break;
                     };
 
+                    //Platea Davanti
                     case "plateaA": {
                         $prezzo = 50;
                         $costoTOT = $nPosti * $prezzo;
@@ -68,8 +73,305 @@
                         break;
                     };
 
+                    //Platea dietro
+                    case "plateaI": {
+                        $prezzo = 45;
+                        $costoTOT = $nPosti * $prezzo;
+                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
+                                Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
+                        echo("<br><br>Di seguito il riepilogo dei dati inseriti consultabile anche su email:<br>");
+                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome<br>");
+                        echo ("<b>Email:</b> $email<br>");
+                        echo ("<b>Cellulare:</b> $cellulare<br>");
+                        echo ("<b>Zona scelta:</b> Platea | file R-V<br>");
+                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br><br>");
+                        echo ("Riceverai il riepilogo anche all'email indicata.");
+
+                        //email
+                        $subject = "Conferma Acquisto Biglietto Teatro Comunale Ferrara";
+                        $txt = "Ciao $nome $cognome,
+                                hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.
+
+                                Il prezzo totale da pagare ammonta a: € $costoTOT.
+
+                                Di seguito il riepilogo dei dati inseriti consultabile anche su email:
+                                - Nome Cognome: $nome $cognome
+                                - Email: $email
+                                - Cellulare: $cellulare
+                                - Zona scelta: Platea | file R-V
+                                - Numero biglietti acquistati: $nPosti";
+                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        
+                        mail($email, $subject, $txt, $headers);
+                        break;
+                    };
+
+                    //Platea Handicap
+                    case "plateaH": {
+                        $prezzo = 45;
+                        $costoTOT = $nPosti * $prezzo;
+                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
+                                Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
+                        echo("<br><br>Di seguito il riepilogo dei dati inseriti consultabile anche su email:<br>");
+                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome<br>");
+                        echo ("<b>Email:</b> $email<br>");
+                        echo ("<b>Cellulare:</b> $cellulare<br>");
+                        echo ("<b>Zona scelta:</b> Platea | handicap<br>");
+                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br><br>");
+                        echo ("Riceverai il riepilogo anche all'email indicata.");
+
+                        //email
+                        $subject = "Conferma Acquisto Biglietto Teatro Comunale Ferrara";
+                        $txt = "Ciao $nome $cognome,
+                                hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.
+
+                                Il prezzo totale da pagare ammonta a: € $costoTOT.
+
+                                Di seguito il riepilogo dei dati inseriti consultabile anche su email:
+                                - Nome Cognome: $nome $cognome
+                                - Email: $email
+                                - Cellulare: $cellulare
+                                - Zona scelta: Platea | handicap
+                                - Numero biglietti acquistati: $nPosti";
+                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        
+                        mail($email, $subject, $txt, $headers);
+                        break;
+                    };
+
+                    //1° Piano | Galleria laterale
+                    case "galleria1": {
+                        $prezzo = 42;
+                        $costoTOT = $nPosti * $prezzo;
+                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
+                                Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
+                        echo("<br><br>Di seguito il riepilogo dei dati inseriti consultabile anche su email:<br>");
+                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome<br>");
+                        echo ("<b>Email:</b> $email<br>");
+                        echo ("<b>Cellulare:</b> $cellulare<br>");
+                        echo ("<b>Zona scelta:</b> 1&deg; Piano | Galleria laterale<br>");
+                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br><br>");
+                        echo ("Riceverai il riepilogo anche all'email indicata.");
+
+                        //email
+                        $subject = "Conferma Acquisto Biglietto Teatro Comunale Ferrara";
+                        $txt = "Ciao $nome $cognome,
+                                hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.
+
+                                Il prezzo totale da pagare ammonta a: € $costoTOT.
+
+                                Di seguito il riepilogo dei dati inseriti consultabile anche su email:
+                                - Nome Cognome: $nome $cognome
+                                - Email: $email
+                                - Cellulare: $cellulare
+                                - Zona scelta: 1° Piano | Galleria laterale
+                                - Numero biglietti acquistati: $nPosti";
+                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        
+                        mail($email, $subject, $txt, $headers);
+                        break;
+                    };
+
+                    //1° Piano | Galleria pre-centrale
+                    case "galleria1_1": {
+                        $prezzo = 43,50;
+                        $costoTOT = $nPosti * $prezzo;
+                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
+                                Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
+                        echo("<br><br>Di seguito il riepilogo dei dati inseriti consultabile anche su email:<br>");
+                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome<br>");
+                        echo ("<b>Email:</b> $email<br>");
+                        echo ("<b>Cellulare:</b> $cellulare<br>");
+                        echo ("<b>Zona scelta:</b> 1&deg; Piano | Galleria pre-centrale<br>");
+                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br><br>");
+                        echo ("Riceverai il riepilogo anche all'email indicata.");
+
+                        //email
+                        $subject = "Conferma Acquisto Biglietto Teatro Comunale Ferrara";
+                        $txt = "Ciao $nome $cognome,
+                                hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.
+
+                                Il prezzo totale da pagare ammonta a: € $costoTOT.
+
+                                Di seguito il riepilogo dei dati inseriti consultabile anche su email:
+                                - Nome Cognome: $nome $cognome
+                                - Email: $email
+                                - Cellulare: $cellulare
+                                - Zona scelta: 1° Piano | Galleria pre-centrale
+                                - Numero biglietti acquistati: $nPosti";
+                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        
+                        mail($email, $subject, $txt, $headers);
+                        break;
+                    };
+
+                    //1° Piano | Galleria centrale
+                    case "galleria1_2": {
+                        $prezzo = 45;
+                        $costoTOT = $nPosti * $prezzo;
+                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
+                                Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
+                        echo("<br><br>Di seguito il riepilogo dei dati inseriti consultabile anche su email:<br>");
+                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome<br>");
+                        echo ("<b>Email:</b> $email<br>");
+                        echo ("<b>Cellulare:</b> $cellulare<br>");
+                        echo ("<b>Zona scelta:</b> 1&deg; Piano | Galleria centrale<br>");
+                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br><br>");
+                        echo ("Riceverai il riepilogo anche all'email indicata.");
+
+                        //email
+                        $subject = "Conferma Acquisto Biglietto Teatro Comunale Ferrara";
+                        $txt = "Ciao $nome $cognome,
+                                hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.
+
+                                Il prezzo totale da pagare ammonta a: € $costoTOT.
+
+                                Di seguito il riepilogo dei dati inseriti consultabile anche su email:
+                                - Nome Cognome: $nome $cognome
+                                - Email: $email
+                                - Cellulare: $cellulare
+                                - Zona scelta: 1° Piano | Galleria centrale
+                                - Numero biglietti acquistati: $nPosti";
+                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        
+                        mail($email, $subject, $txt, $headers);
+                        break;
+                    };
+
+                    //2° Piano | Galleria lato palco
+                    case "galleria2": {
+                        $prezzo = 40;
+                        $costoTOT = $nPosti * $prezzo;
+                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
+                                Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
+                        echo("<br><br>Di seguito il riepilogo dei dati inseriti consultabile anche su email:<br>");
+                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome<br>");
+                        echo ("<b>Email:</b> $email<br>");
+                        echo ("<b>Cellulare:</b> $cellulare<br>");
+                        echo ("<b>Zona scelta:</b> 2&deg; Piano | Galleria lato palco<br>");
+                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br><br>");
+                        echo ("Riceverai il riepilogo anche all'email indicata.");
+
+                        //email
+                        $subject = "Conferma Acquisto Biglietto Teatro Comunale Ferrara";
+                        $txt = "Ciao $nome $cognome,
+                                hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.
+
+                                Il prezzo totale da pagare ammonta a: € $costoTOT.
+
+                                Di seguito il riepilogo dei dati inseriti consultabile anche su email:
+                                - Nome Cognome: $nome $cognome
+                                - Email: $email
+                                - Cellulare: $cellulare
+                                - Zona scelta: 2° Piano | Galleria lato palco
+                                - Numero biglietti acquistati: $nPosti";
+                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        
+                        mail($email, $subject, $txt, $headers);
+                        break;
+                    };
+
+                    //2° Piano | Galleria laterale
+                    case "galleria2_1": {
+                        $prezzo = 41,50;
+                        $costoTOT = $nPosti * $prezzo;
+                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
+                                Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
+                        echo("<br><br>Di seguito il riepilogo dei dati inseriti consultabile anche su email:<br>");
+                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome<br>");
+                        echo ("<b>Email:</b> $email<br>");
+                        echo ("<b>Cellulare:</b> $cellulare<br>");
+                        echo ("<b>Zona scelta:</b> 2&deg; Piano | Galleria laterale<br>");
+                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br><br>");
+                        echo ("Riceverai il riepilogo anche all'email indicata.");
+
+                        //email
+                        $subject = "Conferma Acquisto Biglietto Teatro Comunale Ferrara";
+                        $txt = "Ciao $nome $cognome,
+                                hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.
+
+                                Il prezzo totale da pagare ammonta a: € $costoTOT.
+
+                                Di seguito il riepilogo dei dati inseriti consultabile anche su email:
+                                - Nome Cognome: $nome $cognome
+                                - Email: $email
+                                - Cellulare: $cellulare
+                                - Zona scelta: 2° Piano | Galleria laterale
+                                - Numero biglietti acquistati: $nPosti";
+                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        
+                        mail($email, $subject, $txt, $headers);
+                        break;
+                    };
+
+                    //2° Piano | Galleria pre-centrale
+                    case "galleria2_2": {
+                        $prezzo = 43,50;
+                        $costoTOT = $nPosti * $prezzo;
+                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
+                                Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
+                        echo("<br><br>Di seguito il riepilogo dei dati inseriti consultabile anche su email:<br>");
+                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome<br>");
+                        echo ("<b>Email:</b> $email<br>");
+                        echo ("<b>Cellulare:</b> $cellulare<br>");
+                        echo ("<b>Zona scelta:</b> 2&deg; Piano | Galleria pre-centrale<br>");
+                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br><br>");
+                        echo ("Riceverai il riepilogo anche all'email indicata.");
+
+                        //email
+                        $subject = "Conferma Acquisto Biglietto Teatro Comunale Ferrara";
+                        $txt = "Ciao $nome $cognome,
+                                hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.
+
+                                Il prezzo totale da pagare ammonta a: € $costoTOT.
+
+                                Di seguito il riepilogo dei dati inseriti consultabile anche su email:
+                                - Nome Cognome: $nome $cognome
+                                - Email: $email
+                                - Cellulare: $cellulare
+                                - Zona scelta: 2° Piano | Galleria pre-centrale
+                                - Numero biglietti acquistati: $nPosti";
+                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        
+                        mail($email, $subject, $txt, $headers);
+                        break;
+                    };
+
+                    //2° Piano | Galleria centrale
+                    case "galleria2_3": {
+                        $prezzo = 45;
+                        $costoTOT = $nPosti * $prezzo;
+                        echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
+                                Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
+                        echo("<br><br>Di seguito il riepilogo dei dati inseriti consultabile anche su email:<br>");
+                        echo ("<b>Nome Cognome:</b> $nome&nbsp;$cognome<br>");
+                        echo ("<b>Email:</b> $email<br>");
+                        echo ("<b>Cellulare:</b> $cellulare<br>");
+                        echo ("<b>Zona scelta:</b> 2&deg; Piano | Galleria centrale<br>");
+                        echo ("<b>Numero biglietti acquistati:</b> $nPosti<br><br>");
+                        echo ("Riceverai il riepilogo anche all'email indicata.");
+
+                        //email
+                        $subject = "Conferma Acquisto Biglietto Teatro Comunale Ferrara";
+                        $txt = "Ciao $nome $cognome,
+                                hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.
+
+                                Il prezzo totale da pagare ammonta a: € $costoTOT.
+
+                                Di seguito il riepilogo dei dati inseriti consultabile anche su email:
+                                - Nome Cognome: $nome $cognome
+                                - Email: $email
+                                - Cellulare: $cellulare
+                                - Zona scelta: 2° Piano | Galleria centrale
+                                - Numero biglietti acquistati: $nPosti";
+                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        
+                        mail($email, $subject, $txt, $headers);
+                        break;
+                    };
+
                     default: {
-                        echo ("Zona non ancora inserita nel PHP.");
+                        echo ("Zona inserita non presente.");
                         break;
                     }
                 }
