@@ -668,7 +668,7 @@
                     };
 
                     default: {
-                        echo ("Zona inserita non presente.");
+                        echo ("Selezionare una zona corretta.");
                         break;
                     }
                 }
