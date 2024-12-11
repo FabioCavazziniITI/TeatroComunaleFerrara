@@ -15,7 +15,7 @@
     <body>
         <div class="contenitorePHP">
             CONFERMA ORDINE<br><br>
-            Ciao
+            Gentile
             <?php
                 $nome		=	$_POST["nome"];
                 $cognome	=	$_POST["cognome"];
@@ -68,7 +68,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: Platea | file A-Q
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -101,7 +102,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: Platea | file R-V
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -134,7 +136,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: Platea | handicap
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -167,7 +170,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: 1° Piano | Galleria laterale
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -200,7 +204,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: 1° Piano | Galleria pre-centrale
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -233,7 +238,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: 1° Piano | Galleria centrale
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -266,7 +272,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: 2° Piano | Galleria lato palco
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -299,7 +306,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: 2° Piano | Galleria laterale
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -332,7 +340,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: 2° Piano | Galleria pre-centrale
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -365,7 +374,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: 2° Piano | Galleria centrale
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -398,7 +408,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: 3° Piano | Galleria lato palco
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -431,7 +442,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: 3° Piano | Galleria laterale
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -464,7 +476,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: 3° Piano | Galleria centrale
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -497,7 +510,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: 4° Piano | Galleria lato palco
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -530,7 +544,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: 4° Piano | Galleria laterale
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -563,7 +578,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: 4° Piano | Galleria centrale
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -596,7 +612,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: Balcnonata | Balcone laterale
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -629,7 +646,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: Balcnonata | Balcone pre-centrale
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
@@ -662,7 +680,8 @@
                                 - Cellulare: $cellulare
                                 - Zona scelta: Balcnonata | Balcone centrale
                                 - Numero biglietti acquistati: $nPosti";
-                        $headers = "From:fabio.cavazzini@iticopernico.it"."\r\n";
+                        $headers = "From:no-reply@ticketteatrocomunaleferrara.it"."\r\n";
+                        $headers .= "Reply-To: fabio.cavazzini@iticopernico.it"."\r\n";
                         
                         mail($email, $subject, $txt, $headers);
                         break;
