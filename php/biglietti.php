@@ -4,7 +4,8 @@
         <link rel="icon" href="https://www.teatrocomunaleferrara.it/wp-content/uploads/Teatro-comunale-di-Ferrara-logo-bianco.svg">
         <style>
             * {
-                padding: 20px;
+                padding-top: 20px;
+                padding-left: 20px
             }
         </style>
         <title>
@@ -174,7 +175,7 @@
 
                     //1° Piano | Galleria pre-centrale
                     case "galleria1_1": {
-                        $prezzo = 43,50;
+                        $prezzo = 43.50;
                         $costoTOT = $nPosti * $prezzo;
                         echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
                                 Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
@@ -273,7 +274,7 @@
 
                     //2° Piano | Galleria laterale
                     case "galleria2_1": {
-                        $prezzo = 41,50;
+                        $prezzo = 41.50;
                         $costoTOT = $nPosti * $prezzo;
                         echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
                                 Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
@@ -306,7 +307,7 @@
 
                     //2° Piano | Galleria pre-centrale
                     case "galleria2_2": {
-                        $prezzo = 43,50;
+                        $prezzo = 43.50;
                         $costoTOT = $nPosti * $prezzo;
                         echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
                                 Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
@@ -603,7 +604,7 @@
 
                     //Balcnonata | Balcone pre-centrale
                     case "balcone5_1": {
-                        $prezzo = 30,50;
+                        $prezzo = 30.50;
                         $costoTOT = $nPosti * $prezzo;
                         echo ("hai acquistato correttamente $nPosti biglietti per il Teatro Comunale di Ferrara.<br><br>
                                 Il prezzo totale da pagare ammonta a: &euro; $costoTOT");
