@@ -34,7 +34,7 @@
                     <img src="https://www.teatrocomunaleferrara.it/wp-content/uploads/Teatro-comunale-di-Ferrara-logo-bianco.svg" alt="logo" class="img_logo">
                 </a>
                 <p class="name_sito">
-                    <a href="index.html">
+                    <a href="index.php">
                         Teatro Comunale Ferrara
                     </a>
                 </p>
@@ -44,7 +44,7 @@
             <div class="nav">
                 <ul>
                     <li>
-                        <a href="index.html">
+                        <a href="index.php">
                             <u class="now">
                                 Home
                             </u>
