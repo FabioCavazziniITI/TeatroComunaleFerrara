@@ -52,13 +52,21 @@
                 border-radius: 15px;
                 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
                 text-align: center;
-                width: 800px;
+                width: auto;
             }
 
             .login-container h1 {
-                font-size: 2em;
-                margin-bottom: 20px;
+                font-size: 3em;
+                margin-bottom: 10px;
                 font-style: oblique;
+                color: #F7F3E9;
+            }
+
+            .login-container h2 {
+                font-size: 2.5em;
+                margin-bottom: 20px;
+                font-weight: normal;
+                padding-top: 20px
             }
 
             .login-container form {
@@ -132,8 +140,11 @@
                 ?>
                 <div class="login-container">
                     <h1>
-                    	Teatro Comunale Ferrara - Login
+                        Teatro Comunale Ferrara
                     </h1>
+                    <h2>
+                        Login
+                    </h2>
                     <form action="login.php" method="post">
                         <label>
                             Usurname
