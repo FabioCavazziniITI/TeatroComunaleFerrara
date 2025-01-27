@@ -3,8 +3,8 @@
 
     if (isset($_POST["logout"])) {
         unset($_SESSION["active_login"]);
+        setcookie("NomeUtente", "", time() - 3600, "/"); // Elimina il cookie impostandone la scadenza nel passato
         header("Location: login.php");
-        session_destroy();
         exit;
     }
 
@@ -14,6 +14,13 @@
     }
 
     $user = $_SESSION["active_login"];
+
+    // Controlla se il cookie è impostato
+    if (isset($_COOKIE["NomeUtente"])) {
+        $user = $_COOKIE["NomeUtente"];
+    } else {
+        $user = "Utente non identificato";
+    }
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +45,17 @@
                         Teatro Comunale Ferrara
                     </a>
                 </p>
+            </div>
+
+            <!--STAMPA COOKIE-->
+            <div class="cookie">
+                <?php
+                    if (isset($_COOKIE["NomeUtente"])) {
+                        echo "Utente loggato: " . $user;
+                    } else {
+                        echo $user;
+                    }
+                ?>
             </div>
     
             <!--MENU-->
@@ -130,13 +148,13 @@
             </div>
             <div class="footer_div">
               &#0169 Cavazzini Fabio
-              </br></br>
+              <br><br>
               <a href="mailto:fabio.cavazzini@iticopernico.it">
                   fabio.cavazzini@iticopernico.it
               </a>
-              </br></br>
+              <br><br>
                 Classe V G
-              </br></br>
+              <br><br>
                 A.S. 2024 - 2025
             </div>
           </div>

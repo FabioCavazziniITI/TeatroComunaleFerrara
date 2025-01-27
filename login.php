@@ -12,7 +12,7 @@
         $user = $_POST["username"];
         $pwd = $_POST["password"];
 
-        if ($user == "Simba21" && $pwd == "HakunaMatata21") {
+        if ($user == "Ciao" && $pwd == "HakunaMatata21") {
             $_SESSION["active_login"] = $user;
             header("Location: index.php");
             exit;
@@ -167,15 +167,13 @@
                     </label>
                     <input type="password" name="password" placeholder="Password" required>
                     <input type="submit" class="button" name="submit" value="Accedi">
-                    
-                    <!-- Messaggio di errore sotto il bottone -->
+                    <!--Messaggio di errore-->
                     <?php
                         if (isset($error)) {
                             echo "<p style=\"color: #FFA500;\">" . $error . "</p>";
                         }
                     ?>
                 </form>
-
                 <div class="footer">
                     <a href="#">Password dimenticata?</a>
                 </div>

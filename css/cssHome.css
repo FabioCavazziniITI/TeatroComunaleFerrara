@@ -11,6 +11,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #2C3E50;
+    color: #D4AF37;
 }
 
 /* LOGO */
@@ -29,14 +30,20 @@
 }
 
 .name_sito {
-    font-size: 28pt;
     color: #D4AF37;
+    font-size: 28pt;
     margin-left: 10px;
 }
 
 a {
     color: #D4AF37;
     text-decoration: none;
+}
+
+/* COOKIE */
+.cookie {
+    color: #D4AF37;
+    font-size: 14pt;
 }
 
 /* MENU */
