@@ -22,8 +22,10 @@
         }
     }
 ?>
+
+<!DOCTYPE html>
 <html>
-<head>
+    <head>
         <link rel="icon" href="https://www.teatrocomunaleferrara.it/wp-content/uploads/Teatro-comunale-di-Ferrara-logo-bianco.svg">
         <!--<link rel="stylesheet" type="text/css" href="css/cssLogin.css" media="all">-->
         <title>
@@ -147,11 +149,6 @@
     </head>
     <body>
         <div class="header">
-            <?php
-            if (isset($error)) {
-                echo "<p style=\"color: #FF0000;\">" . $error . "</p>";
-            }
-            ?>
             <div class="login-container">
                 <div class="header-title">
                     <h1>
@@ -162,7 +159,7 @@
                 </div>
                 <form action="login.php" method="post">
                     <label>
-                        Usurname
+                        Username
                     </label>
                     <input type="text" name="username" placeholder="Nome utente" required>
                     <label class="pwd">
@@ -170,7 +167,15 @@
                     </label>
                     <input type="password" name="password" placeholder="Password" required>
                     <input type="submit" class="button" name="submit" value="Accedi">
+                    
+                    <!-- Messaggio di errore sotto il bottone -->
+                    <?php
+                        if (isset($error)) {
+                            echo "<p style=\"color: #FFA500;\">" . $error . "</p>";
+                        }
+                    ?>
                 </form>
+
                 <div class="footer">
                     <a href="#">Password dimenticata?</a>
                 </div>
