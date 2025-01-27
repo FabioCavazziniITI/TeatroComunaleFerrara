@@ -39,6 +39,12 @@ a {
     text-decoration: none;
 }
 
+/* COOKIE */
+.cookie {
+    color: #D4AF37;
+    font-size: 14pt;
+}
+
 /* MENU */
 .nav {
     display: flex;
