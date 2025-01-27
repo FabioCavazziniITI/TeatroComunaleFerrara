@@ -1,0 +1,34 @@
+.header {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2C3E50;
+}
+
+/* LOGO */
+.logo {
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.img_logo {
+    width: 50px;
+    height: 60px;
+}
+
+.name_sito {
+    font-size: 28pt;
+    color: #D4AF37;
+    margin-left: 10px;
+}
+
+a {
+    color: #D4AF37;
+    text-decoration: none;
+}

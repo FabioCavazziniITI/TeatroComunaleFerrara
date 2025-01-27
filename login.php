@@ -27,6 +27,42 @@
         <title>Login Teatro Comunale Ferrara</title>
     </head>
     <body>
+    <div class="header">
+            <!--LOGO-->
+            <div class="logo">
+                <a href="index.php">
+                    <img src="https://www.teatrocomunaleferrara.it/wp-content/uploads/Teatro-comunale-di-Ferrara-logo-bianco.svg" alt="logo" class="img_logo">
+                </a>
+                <p class="name_sito">
+                    <a href="index.php">
+                        Teatro Comunale Ferrara
+                    </a>
+                </p>
+            </div>
+    
+            <!--MENU-->
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="index.php">
+                            <u class="now">
+                                Home
+                            </u>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="php/prenota.php" >
+                            Prenota
+                        </a>
+                    </li>
+                    <li>
+                        <form action="index.php" method="POST">
+                            <input type="submit" class="button" name="logout" value="Logout">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div id="Main">
             <?php
               if (isset($error)) {
