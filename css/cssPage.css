@@ -80,6 +80,31 @@ a {
     text-decoration: underline;
 }
 
+
+
+.logout-button {
+    background-color: #B22222; /* Colore principale del pulsante */
+    color: #F7F3E9; /* Colore del testo */
+    border: none;
+    border-radius: 25px; /* Angoli arrotondati */
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button:hover {
+    background-color: #740000; /* Colore hover */
+    transform: scale(1.05); /* Leggero ingrandimento al passaggio del mouse */
+}
+
+.logout-button:active {
+    background-color: #590000; /* Colore quando il pulsante è premuto */
+    transform: scale(0.95); /* Leggera riduzione quando cliccato */
+}
+
 /* CONTENUTO */
 .prenotazione {
     width: 100%;

@@ -1,69 +1,74 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
+    background-color: #F7F3E9; /* Colore di sfondo */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.container {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.login-container {
+    background-color: #2C3E50; /* Sfondo del form */
+    color: #D4AF37; /* Testo principale */
     padding: 20px;
-    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
     text-align: center;
 }
 
-.container h1 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    color: #333;
+.login-container h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-style: oblique;
 }
 
-.container form {
+.login-container form {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
-.container input[type="text"], .container input[type="password"] {
-    margin-bottom: 15px;
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #D4AF37;
+    border-radius: 5px;
+    background-color: #F7F3E9;
+    color: #333;
     font-size: 1em;
 }
 
-.container button {
-    background-color: #007bff;
-    color: #fff;
+.login-container input:focus {
+    border-color: #B22222;
+    outline: none;
+    box-shadow: 0 0 5px rgba(178, 34, 34, 0.5);
+}
+
+.login-container button {
+    background-color: #B22222;
+    color: #F7F3E9;
     border: none;
-    padding: 10px;
-    border-radius: 4px;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
     font-size: 1em;
+    transition: background-color 0.4s ease;
 }
 
-.container button:hover {
-    background-color: #0056b3;
+.login-container button:hover {
+    background-color: #740000;
 }
 
-.container a {
-    font-size: 0.9em;
-    color: #007bff;
+.login-container a {
+    color: #D4AF37;
     text-decoration: none;
-    margin-top: 10px;
+    font-size: 0.9em;
 }
 
-.container a:hover {
+.login-container a:hover {
     text-decoration: underline;
 }

@@ -31,33 +31,34 @@
         </title>
     </head>
     <body>
-    <div class="header">
-        <div id="Main">
-            <?php
-              if (isset($error)) {
-                  echo "<p style=\"color: #FF0000;\">" . $error . "</p>";
-              }
-            ?>
-            <div class="container">
-                <h1>
-                    Login Teatro Comunale Ferrara
-                </h1>
-                <form action="login_process.php" method="post">
-                    <p>
-                        <label>
-                            Username:
-                        </label>
-                        <input type="text" name="username" require>
-                    </p>
-                    <p>
-                        <label>
-                            Password:
-                        </label>
-                        <input type="password" name="password" require>
-                    </p>
-                    <button type="submit">Accedi</button>
-                </form>
-                <a href="#">Password dimenticata?</a>
+        <div class="header">
+            <div id="Main">
+                <?php
+                if (isset($error)) {
+                    echo "<p style=\"color: #FF0000;\">" . $error . "</p>";
+                }
+                ?>
+                <div class="container">
+                    <h1>
+                        Login Teatro Comunale Ferrara
+                    </h1>
+                    <form action="login.php" method="post">
+                        <p>
+                            <label>
+                                Username:
+                            </label>
+                            <input type="text" name="username" placeholder="Nome utente" required>
+                        </p>
+                        <p>
+                            <label>
+                                Password:
+                            </label>
+                            <input type="password" name="password" placeholder="Password" required>
+                        </p>
+                        <input type="submit" class="button" name="submit" value="Accedi">
+                    </form>
+                    <a href="#">Password dimenticata?</a>
+                </div>
             </div>
         </div>
     </body>
