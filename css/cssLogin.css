@@ -6,27 +6,35 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #F7F3E9;
+    background-color: #F7F3E9; /* Sfondo del sito */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #D4AF37;
+    color: #D4AF37; /* Colore del testo */
 }
 
 .login-container {
-    background-color: #2C3E50;
+    background-color: #2C3E50; /* Sfondo del form */
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 800px;
+    width: auto;
 }
 
 .login-container h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 3em;
+    margin-bottom: 10px;
     font-style: oblique;
+    color: #F7F3E9;
+}
+
+.login-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: normal;
+    padding-top: 20px
 }
 
 .login-container form {
