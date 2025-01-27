@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* LOGO E MENU */
 .header {
     height: 80px;
     display: flex;
@@ -31,4 +37,45 @@
 a {
     color: #D4AF37;
     text-decoration: none;
+}
+
+/* MENU */
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: large;
+    margin-right: 20px;
+}
+
+.nav ul {
+    list-style-type: none;
+}
+
+.nav ul li {
+    display: inline-block;
+}
+
+.now {
+    transition: none;
+    color: #B22222;
+}
+
+.nav ul li a {
+    width: 70px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: block;
+    text-decoration: none;
+    color: #D4AF37;
+    font-size: 14pt;
+    transition: background-color 0.3s;
+}
+
+.nav ul li a:hover {
+    text-decoration: underline;
 }

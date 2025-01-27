@@ -23,8 +23,12 @@
     }
 ?>
 <html>
-    <head>
-        <title>Login Teatro Comunale Ferrara</title>
+<head>
+        <link rel="icon" href="https://www.teatrocomunaleferrara.it/wp-content/uploads/Teatro-comunale-di-Ferrara-logo-bianco.svg">
+        <link rel="stylesheet" type="text/css" href="css/cssLogin.css" media="all">
+        <title>
+            Teatro Comunale Ferrara - Login
+        </title>
     </head>
     <body>
     <div class="header">
@@ -35,7 +39,7 @@
                 </a>
                 <p class="name_sito">
                     <a href="index.php">
-                        Teatro Comunale Ferrara
+                        Teatro Comunale Ferrara - LOGIN
                     </a>
                 </p>
             </div>
