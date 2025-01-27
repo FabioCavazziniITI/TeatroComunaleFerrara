@@ -55,28 +55,44 @@
                 width: auto;
             }
 
-            .login-container h1 {
-                font-size: 3em;
-                margin-bottom: 10px;
-                font-style: oblique;
-                color: #F7F3E9;
+            .header-title {
+                display: flex;
+                align-items: center;
+                justify-content: center;  
+				gap: 15px;
+            }
+
+            .header-title img {
+                width: 50px;
+                height: 100px;
             }
 
             .login-container h2 {
-                font-size: 2.5em;
-                margin-bottom: 20px;
-                font-weight: normal;
-                padding-top: 20px
+                margin-bottom: 10px;
+                font-style: oblique;
+                color: #F7F3E9;
+                padding-top: 20px;
+                padding-bottom: 20px;
             }
 
             .login-container form {
                 display: flex;
-                flex-direction: column;
-                gap: 15px;
+                flex-direction: column;  
+				gap: 15px;
+            }
+            
+            label {
+                color: #F7F3E9;
+                text-align:left;
+                font-size: 14pt;
+                font-weight: bold;
+            }
+            
+            .pwd {
+            	margin-top: 10px;
             }
 
-            .login-container input[type="text"],
-            .login-container input[type="password"] {
+            .login-container input[type="text"], .login-container input[type="password"] {
                 width: 100%;
                 padding: 12px;
                 border: 1px solid #D4AF37;
@@ -96,6 +112,7 @@
                 background-color: #B22222;
                 color: #F7F3E9;
                 border: none;
+                margin-top:50px;
                 padding: 12px;
                 border-radius: 8px;
                 font-size: 1em;
@@ -132,33 +149,34 @@
     </head>
     <body>
         <div class="header">
-            <div id="Main">
-                <?php
-                if (isset($error)) {
-                    echo "<p style=\"color: #FF0000;\">" . $error . "</p>";
-                }
-                ?>
-                <div class="login-container">
+            <?php
+            if (isset($error)) {
+                echo "<p style=\"color: #FF0000;\">" . $error . "</p>";
+            }
+            ?>
+            <div class="login-container">
+                <div class="header-title">
                     <h1>
                         Teatro Comunale Ferrara
                     </h1>
-                    <h2>
-                        Login
-                    </h2>
-                    <form action="login.php" method="post">
-                        <label>
-                            Usurname
-                        </label>
-                        <input type="text" name="username" placeholder="Nome utente" required>
-                        <label>
-                            Password
-                        </label>
-                        <input type="password" name="password" placeholder="Password" required>
-                        <input type="submit" class="button" name="submit" value="Accedi">
-                    </form>
-                    <div class="footer">
-                        <a href="#">Password dimenticata?</a>
-                    </div>
+                    <img src="https://www.teatrocomunaleferrara.it/wp-content/uploads/Teatro-comunale-di-Ferrara-logo-bianco.svg" alt="Logo Teatro Comunale Ferrara">
+                </div>
+                <h2>
+                    Accedi
+                </h2>
+                <form action="login.php" method="post">
+                    <label>
+                        Usurname
+                    </label>
+                    <input type="text" name="username" placeholder="Nome utente" required>
+                    <label class="pwd">
+                        Password
+                    </label>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="submit" class="button" name="submit" value="Accedi">
+                </form>
+                <div class="footer">
+                    <a href="#">Password dimenticata?</a>
                 </div>
             </div>
         </div>
