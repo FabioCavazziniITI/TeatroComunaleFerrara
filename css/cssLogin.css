@@ -26,8 +26,14 @@ body {
 .header-title {
     display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: center;
+    padding-bottom: 30px;
     gap: 15px;
+}
+
+.header-title n {
+    color: #F7F3E9;
+    font-size: 19pt;
 }
 
 .header-title img {
@@ -35,29 +41,21 @@ body {
     height: 100px;
 }
 
-.login-container h2 {
-    margin-bottom: 10px;
-    font-style: oblique;
-    color: #F7F3E9;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
 .login-container form {
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
     gap: 15px;
 }
 
 label {
     color: #F7F3E9;
     text-align:left;
-    font-size: 14pt;
+    font-size: 12pt;
     font-weight: bold;
 }
 
 .pwd {
-    margin-top: 10px;
+    padding-top: 10px;
 }
 
 .login-container input[type="text"], .login-container input[type="password"] {
@@ -80,7 +78,7 @@ label {
     background-color: #B22222;
     color: #F7F3E9;
     border: none;
-    margin-top:50px;
+    margin-top: 20px;
     padding: 12px;
     border-radius: 8px;
     font-size: 1em;
