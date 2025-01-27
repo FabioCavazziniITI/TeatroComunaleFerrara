@@ -154,7 +154,9 @@
                 <div class="header-title">
                     <h1>
                         Teatro Comunale Ferrara<br>
-                        <n>Accedi</n>
+                        <n>
+                            Login
+                        </n>
                     </h1>
                     <img src="https://www.teatrocomunaleferrara.it/wp-content/uploads/Teatro-comunale-di-Ferrara-logo-bianco.svg" alt="Logo Teatro Comunale Ferrara">
                 </div>
