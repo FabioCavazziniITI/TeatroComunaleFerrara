@@ -32,62 +32,33 @@
     </head>
     <body>
     <div class="header">
-            <!--LOGO-->
-            <div class="logo">
-                <a href="index.php">
-                    <img src="https://www.teatrocomunaleferrara.it/wp-content/uploads/Teatro-comunale-di-Ferrara-logo-bianco.svg" alt="logo" class="img_logo">
-                </a>
-                <p class="name_sito">
-                    <a href="index.php">
-                        Teatro Comunale Ferrara - LOGIN
-                    </a>
-                </p>
-            </div>
-    
-            <!--MENU-->
-            <div class="nav">
-                <ul>
-                    <li>
-                        <a href="index.php">
-                            <u class="now">
-                                Home
-                            </u>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="php/prenota.php" >
-                            Prenota
-                        </a>
-                    </li>
-                    <li>
-                        <form action="index.php" method="POST">
-                            <input type="submit" class="button" name="logout" value="Logout">
-                        </form>
-                    </li>
-                </ul>
-            </div>
-        </div>
         <div id="Main">
             <?php
               if (isset($error)) {
                   echo "<p style=\"color: #FF0000;\">" . $error . "</p>";
               }
             ?>
-            <form action="" method="POST">
-                <p>
-                    <label>
-                    	Username:
-                    </label>
-                    <input type="text" name="username">
-                </p>
-                <p>
-                    <label>
-                    	Password:
-                    </label>
-                    <input type="password" name="password">
-                </p>
-                <input type="submit" class="button" name="submit" value="Accedi">
-            </form>
+            <div class="container">
+                <h1>
+                    Login Teatro Comunale Ferrara
+                </h1>
+                <form action="login_process.php" method="post">
+                    <p>
+                        <label>
+                            Username:
+                        </label>
+                        <input type="text" name="username" require>
+                    </p>
+                    <p>
+                        <label>
+                            Password:
+                        </label>
+                        <input type="password" name="password" require>
+                    </p>
+                    <button type="submit">Accedi</button>
+                </form>
+                <a href="#">Password dimenticata?</a>
+            </div>
         </div>
     </body>
 </html>
