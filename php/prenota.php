@@ -30,7 +30,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="prenota.html">
+                        <a href="prenota.php">
                             <u class="now">
                                 Prenota
                             </u>

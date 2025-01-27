@@ -4,6 +4,7 @@
     if (isset($_POST["logout"])) {
         unset($_SESSION["active_login"]);
         header("Location: login.php");
+        session_destroy();
         exit;
     }
 
@@ -50,9 +51,14 @@
                         </a>
                     </li>
                     <li>
-                        <a href="html/prenota.html" >
+                        <a href="php/prenota.php" >
                             Prenota
                         </a>
+                    </li>
+                    <li>
+                        <form action="index.php" method="POST">
+                            <input type="submit" class="button" name="logout" value="Logout">
+                        </form>
                     </li>
                 </ul>
             </div>
