@@ -8,17 +8,18 @@
         exit;
     }
 
+    session_start();
+
     if (!isset($_SESSION["active_login"])) {
         header("Location: login.php");
         exit;
     }
 
-    $user = $_SESSION["active_login"];
-
     // Controlla se il cookie è impostato
     if (isset($_COOKIE["NomeUtente"])) {
         $user = $_COOKIE["NomeUtente"];
-    } else {
+    }
+    else {
         $user = "Utente non identificato";
     }
 ?>

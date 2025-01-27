@@ -12,9 +12,10 @@
         $user = $_POST["username"];
         $pwd = $_POST["password"];
 
-        if ($user == "Ciao" && $pwd == "HakunaMatata21") {
-            $_SESSION["active_login"] = $user;
-            header("Location: index.php");
+        if ($user == "Simba21" && $pwd == "HakunaMatata21") { //CREDENZIALI ACCESSO
+            $_SESSION["active_login"] = $user; // Salva il nome utente nella sessione
+            setcookie("NomeUtente", $user, time() + (86400 * 30), "/"); // Crea un cookie valido per 30 giorni
+            header("Location: index.php"); // Reindirizza alla home page
             exit;
         }
         else {
