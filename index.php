@@ -1,3 +1,20 @@
+<?php
+    session_start();
+
+    if (isset($_POST["logout"])) {
+        unset($_SESSION["active_login"]);
+        header("Location: login.php");
+        exit;
+    }
+
+    if (!isset($_SESSION["active_login"])) {
+        header("Location: login.php");
+        exit;
+    }
+
+    $user = $_SESSION["active_login"];
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
