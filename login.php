@@ -33,7 +33,7 @@
                   echo "<p style=\"color: #FF0000;\">" . $error . "</p>";
               }
             ?>
-            <form action="insegnante.php" method="POST">
+            <form action="" method="POST">
                 <p>
                     <label>
                     	Username:

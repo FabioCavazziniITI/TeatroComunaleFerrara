@@ -29,7 +29,7 @@
         <div class="header">
             <!--LOGO-->
             <div class="logo">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="https://www.teatrocomunaleferrara.it/wp-content/uploads/Teatro-comunale-di-Ferrara-logo-bianco.svg" alt="logo" class="img_logo">
                 </a>
                 <p class="name_sito">
