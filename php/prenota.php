@@ -211,44 +211,6 @@
                         <input type="number" id="numeroPosti" name="numeroPosti" min="1" max="10" value="1" required>
                     </div>
             
-                    <!-- Selezione della zona -->
-                    <div class="formGroup">
-                        <label for="zona">Zona preferita:</label>
-                        <select id="zona" name="zona" required>
-                            <option value="">-- Seleziona una zona presente nei prezzi --</option>
-                            <!--PLATEA-->
-                            <option value="plateaA">Platea | file A-Q</option>
-                            <option value="plateaI">Platea | file R-V</option>
-                            <option value="plateaH">Platea - handicap</option>
-                            <!--PRIMO PIANO-->
-                            <option value="divisorio">-- PRIMO PIANO --</option>
-                            <option value="galleria1">1&deg; Piano | Galleria laterale</option>
-                            <option value="galleria1_1">1&deg; Piano | Galleria pre-centrale</option>
-                            <option value="galleria1_2">1&deg; Piano | Galleria centrale</option>
-                            <!--SECONDO PIANO-->
-                            <option value="divisorio">-- SECONDO PIANO --</option>
-                            <option value="galleria2">2&deg; Piano | Galleria lato palco</option>
-                            <option value="galleria2_1">2&deg; Piano | Galleria laterale</option>
-                            <option value="galleria2_2">2&deg; Piano | Galleria pre-centrale</option>
-                            <option value="galleria2_3">2&deg; Piano | Galleria centrale</option>
-                            <!--TERZO PIANO-->
-                            <option value="divisorio">-- TERZO PIANO --</option>
-                            <option value="galleria3">3&deg; Piano | Galleria lato palco</option>
-                            <option value="galleria3_1">3&deg; Piano | Galleria laterale</option>
-                            <option value="galleria3_2">3&deg; Piano | Galleria centrale</option>
-                            <!--QUARTO PIANO-->
-                            <option value="divisorio">-- QUARTO PIANO --</option>
-                            <option value="galleria4">4&deg; Piano | Galleria lato palco</option>
-                            <option value="galleria4_1">4&deg; Piano | Galleria laterale</option>
-                            <option value="galleria4_2">4&deg; Piano | Galleria centrale</option>
-                            <!--QUINTO PIANO-->
-                            <option value="divisorio">-- BALCONATA --</option>
-                            <option value="balcone5">Balcone laterale</option>
-                            <option value="balcone5_1">Balcone pre-centrale</option>
-                            <option value="balcone5_2">Balcone centrale</option>
-                        </select>
-                    </div>
-            
                     <!-- Pulsante di invio -->
                     <div class="formGroup">
                         <button type="submit" class="submitButton">Acquista</button>
