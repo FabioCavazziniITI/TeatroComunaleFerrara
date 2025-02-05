@@ -4,14 +4,14 @@
     if (isset($_POST["logout"])) {
         unset($_SESSION["active_login"]);
         setcookie("NomeUtente", "", time() - 3600, "/"); // Elimina il cookie impostandone la scadenza nel passato
-        header("Location: login.php");
+        header("Location: ../login.php");
         exit;
     }
 
     session_start();
 
     if (!isset($_SESSION["active_login"])) {
-        header("Location: login.php");
+        header("Location: ../login.php");
         exit;
     }
 
