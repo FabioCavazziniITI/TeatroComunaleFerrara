@@ -1,0 +1,89 @@
+.biglietti {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: #F7F3E9;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.formContainer {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    background-color: #2C3E50;
+    color: #D4AF37;
+    line-height: 1.6;
+}
+
+.ticketForm h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #D4AF37;
+    margin-bottom: 20px;
+    font-style: oblique;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #D4AF37;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D4AF37;
+    border-radius: 5px;
+    background-color: #F7F3E9;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #333;
+}
+
+input:focus,
+select:focus {
+    border-color: #B22222;
+    outline: none;
+    box-shadow: 0 0 5px rgba(178, 34, 34, 0.5);
+}
+
+.submitButton {
+    width: 100%;
+    background-color: #B22222;
+    color: #F7F3E9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.4s ease;
+}
+
+.submitButton:hover {
+    background-color: #740000;
+}
+
+.inlineGroup {
+    display: flex;
+    gap: 10px;
+}
+
+.inlineGroup .formGroup {
+    flex: 1;
+}

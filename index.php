@@ -68,12 +68,17 @@
                         </a>
                     </li>
                     <li>
-                        <a href="php/prenota.php" >
+                        <a href="php/prenota.php">
                             Prenota
                         </a>
                     </li>
                     <li>
-                        <form action="index.php" method="POST">
+                        <a href="php/carrello.php">
+                            Carrello
+                        </a>
+                    </li>
+                    <li>
+                        <form action="prenota.php" method="POST">
                             <input type="submit" class="logout-button" name="logout" value="Logout">
                         </form>
                     </li>
