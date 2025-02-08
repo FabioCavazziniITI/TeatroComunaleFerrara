@@ -264,8 +264,8 @@ hr {
     flex-direction: column;
     align-items: center;  /* Centra il contenuto orizzontalmente */
     justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 100px;
+    padding-top: 15px;
+    padding-bottom: 500px;
     background-color: #F7F3E9;
 }
 
