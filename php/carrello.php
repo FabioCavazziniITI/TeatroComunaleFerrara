@@ -20,6 +20,8 @@
     else {
         $user = "Utente non identificato";
     }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -87,5 +89,70 @@
 
         <!--CONTENUTO-->
         <div class="carrello">
-            
+            <?php
+                function mostra()
+                { 
+                    echo ("<table>"); 
+                    echo ("
+                            <tr>
+                                <th>
+                                    Nome Prodotto
+                                </th>
+                                <th>
+                                    Prezzo
+                                </th>
+                                <th>
+                                    Azioni
+                                </th>
+                            </tr>
+                        ");
+
+                    foreach($_SESSION['carrello'] as $nome=>$prezzo)
+                    { 
+                        echo("
+                                <tr>
+                                    <td>
+                                        ".$nome."
+                                    </td>
+                                    <td>
+                                        € ".$prezzo."
+                                    </td>
+                                    <td>
+                                        <button>
+                                            <a href=carrello.php?action=delete&indice=".$nome." style='color: black;'>
+                                                Rimuovi
+                                            </a>
+                                        </button>
+                                    </td>
+                                </tr>
+                            "); 
+                    } 
+                    echo ("</table>"); 
+                } 
+
+                if (isset($_GET['action'])) { 
+                    if($_GET['action']=="clear") { 
+                        unset ($_SESSION['carrello']); 
+                    } 
+                    if ($_GET['action']=="delete") { 
+                        unset($_SESSION['carrello'][$_GET['indice']]);
+                        mostra(); 
+                    } 
+                } else {
+                    mostra();
+                } 
+            ?>
+
+            <div class="buttons-container">
+                <button class="button-carrello">
+                    <a href="carrello.php?action=clear">
+                        Svuota Carrello
+                    </a>
+                </button>
+                <button class="button-carrello">
+                    <a href="prenota.php">
+                        Torna alla lista dei posti
+                    </a>
+                </button>
+            </div>
         </div>

@@ -24,36 +24,39 @@
     //CARRELLO
     $prodotti=array(
                         //primo piano
-                        '1&deg; piano - galleria laterale'      =>  42.00,
-                        '1&deg; piano - galleria pre-centrale'  =>  43.50,
-                        '1&deg; piano - galleria centrale'      =>  45.00,
+                        '1°_piano_galleria-pre-centrale'  =>  43.50,
+                        '1°_piano_galleria-laterale'      =>  42.00,
+                        '1°_piano_galleria-centrale'      =>  45.00,
                         //secondo piano
-                        '2&deg; piano - galleria lato palco'    =>  40.00,
-                        '2&deg; piano - galleria laterale'      =>  41.50,
-                        '2&deg; piano - galleria pre-centrale'  =>  43.50,
-                        '2&deg; piano - galleria centrale'      =>  50.00,
+                        '2°_piano_galleria-lato-palco'    =>  40.00,
+                        '2°_piano_galleria-laterale'      =>  41.50,
+                        '2°_piano_galleria-pre-centrale'  =>  43.50,
+                        '2°_piano_galleria-centrale'      =>  50.00,
                         //terzo piano
-                        '3&deg; piano - galleria lato palco'    =>  38.00,
-                        '3&deg; piano - galleria laterale'      =>  40.00,
-                        '3&deg; piano - galleria centrale'      =>  42.00,
+                        '3°_piano_galleria-lato-palco'    =>  38.00,
+                        '3°_piano_galleria-laterale'      =>  40.00,
+                        '3°_piano_galleria-centrale'      =>  42.00,
                         //quarto piano
-                        '4&deg; piano - galleria lato palco'    =>  36.00,
-                        '4&deg; piano - galleria laterale'      =>  38.00,
-                        '4&deg; piano - galleria centrale'      =>  40.00,
+                        '4°_piano_galleria-lato-palco'    =>  36.00,
+                        '4°_piano_galleria-laterale'      =>  38.00,
+                        '4°_piano_galleria-centrale'      =>  40.00,
                         //balconata
-                        'balcone laterale'                      =>  29.00,
-                        'balcone pre-centrale'                  =>  30.50,
-                        'balcone centrale'                      =>  32.00,
+                        'balcone_laterale'                      =>  29.00,
+                        'balcone_pre-centrale'                  =>  30.50,
+                        'balcone_centrale'                      =>  32.00,
                         //platea
-                        'platea | A-Q'                          =>  50.00,
-                        'platea | R-V'                          =>  47.50,
-                        'platea | handicap'                     =>  47.50
+                        'platea_|_A-Q'                          =>  50.00,
+                        'platea_|_R-V'                          =>  47.50,
+                        'platea_|_handicap'                     =>  47.50
                     );
 
-    if(isset($_GET['action'])){ 
-        if ($_GET['action']=="add") {
-            $nome=$_GET['nome'];
-            $_SESSION['carrello'][$nome]=$prodotti[$nome];
+    if(isset($_GET['nome'])) {
+        $nome = htmlspecialchars($_GET['nome'], ENT_QUOTES, 'UTF-8');
+        
+        if (array_key_exists($nome, $prodotti)) {
+            $_SESSION['carrello'][$nome] = $prodotti[$nome];
+        } else {
+            echo "Errore: prodotto non trovato.";
         }
     }
 ?>
@@ -141,7 +144,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="1&deg; piano - galleria laterale") {
+                                        if($nome=="1°_piano_galleria-laterale") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -159,7 +162,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="1&deg; piano - galleria pre-centrale") {
+                                        if($nome=="1°_piano_galleria-pre-centrale") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -177,7 +180,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="1&deg; piano - galleria centrale") {
+                                        if($nome=="1°_piano_galleria-centrale") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -198,7 +201,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="2&deg; piano - galleria lato palco") {
+                                        if($nome=="2°_piano_galleria-lato-palco") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -216,7 +219,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="2&deg; piano - galleria laterale") {
+                                        if($nome=="2°_piano_galleria-laterale") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -234,7 +237,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="2&deg; piano - galleria pre-centrale") {
+                                        if($nome=="2°_piano_galleria-pre-centrale") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -252,7 +255,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="2&deg; piano - galleria centrale") {
+                                        if($nome=="2°_piano_galleria-centrale") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -274,7 +277,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="3&deg; piano - galleria lato palco") {
+                                        if($nome=="3°_piano_galleria-lato-palco") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -292,7 +295,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="3&deg; piano - galleria laterale") {
+                                        if($nome=="3°_piano_galleria-laterale") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -310,7 +313,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="3&deg; piano - galleria centrale") {
+                                        if($nome=="3°_piano_galleria-centrale") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -331,7 +334,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="4&deg; piano - galleria lato palco") {
+                                        if($nome=="4°_piano_galleria-lato-palco") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -349,7 +352,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="4&deg; piano - galleria laterale") {
+                                        if($nome=="4°_piano_galleria-laterale") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -367,7 +370,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="4&deg; piano - galleria centrale") {
+                                        if($nome=="4°_piano_galleria-centrale") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -389,7 +392,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="balcone laterale") {
+                                        if($nome=="balcone_laterale") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -407,7 +410,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="balcone pre-centrale") {
+                                        if($nome=="balcone_pre-centrale") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -425,7 +428,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="balcone centrale") {
+                                        if($nome=="balcone_centrale") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -446,7 +449,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="platea | A-Q") {
+                                        if($nome=="platea_|_A-Q") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -464,7 +467,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="platea | R-V") {
+                                        if($nome=="platea_|_R-V") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
@@ -482,7 +485,7 @@
                                 <br>
                                 <?php
                                     foreach ($prodotti as $nome=>$prezzo) {
-                                        if($nome=="platea | handicap") {
+                                        if($nome=="platea_|_handicap") {
                                             echo("
                                                 <button>
                                                     <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
