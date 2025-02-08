@@ -8,8 +8,6 @@
         exit;
     }
 
-    session_start();
-
     if (!isset($_SESSION["active_login"])) {
         header("Location: ../login.php");
         exit;
