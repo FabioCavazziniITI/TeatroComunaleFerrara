@@ -41,13 +41,13 @@
                         '4°_piano_galleria-laterale'      =>  38.00,
                         '4°_piano_galleria-centrale'      =>  40.00,
                         //balconata
-                        'balcone_laterale'                      =>  29.00,
-                        'balcone_pre-centrale'                  =>  30.50,
-                        'balcone_centrale'                      =>  32.00,
+                        'balcone_laterale'                =>  29.00,
+                        'balcone_pre-centrale'            =>  30.50,
+                        'balcone_centrale'                =>  32.00,
                         //platea
-                        'platea_|_A-Q'                          =>  50.00,
-                        'platea_|_R-V'                          =>  47.50,
-                        'platea_|_handicap'                     =>  47.50
+                        'platea_|_A-Q'                    =>  50.00,
+                        'platea_|_R-V'                    =>  47.50,
+                        'platea_|_handicap'               =>  47.50
                     );
 
     if(isset($_GET['nome'])) {
