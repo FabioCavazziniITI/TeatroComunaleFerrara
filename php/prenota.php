@@ -20,6 +20,42 @@
     else {
         $user = "Utente non identificato";
     }
+
+    //CARRELLO
+    $prodotti=array(
+                        //primo piano
+                        '1&deg; piano - galleria laterale'      =>  42.00,
+                        '1&deg; piano - galleria pre-centrale'  =>  43.50,
+                        '1&deg; piano - galleria centrale'      =>  45.00,
+                        //secondo piano
+                        '2&deg; piano - galleria lato palco'    =>  40.00,
+                        '2&deg; piano - galleria laterale'      =>  41.50,
+                        '2&deg; piano - galleria pre-centrale'  =>  43.50,
+                        '2&deg; piano - galleria centrale'      =>  50.00,
+                        //terzo piano
+                        '3&deg; piano - galleria lato palco'    =>  38.00,
+                        '3&deg; piano - galleria laterale'      =>  40.00,
+                        '3&deg; piano - galleria centrale'      =>  42.00,
+                        //quarto piano
+                        '4&deg; piano - galleria lato palco'    =>  36.00,
+                        '4&deg; piano - galleria laterale'      =>  38.00,
+                        '4&deg; piano - galleria centrale'      =>  40.00,
+                        //balconata
+                        'balcone laterale'                      =>  29.00,
+                        'balcone pre-centrale'                  =>  30.50,
+                        'balcone centrale'                      =>  32.00,
+                        //platea
+                        'platea | A-Q'                          =>  50.00,
+                        'platea | R-V'                          =>  47.50,
+                        'platea | handicap'                     =>  47.50
+                    );
+
+    if(isset($_GET['action'])){ 
+        if ($_GET['action']=="add") {
+            $nome=$_GET['nome'];
+            $_SESSION['carrello'][$nome]=$prodotti[$nome];
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -102,14 +138,56 @@
                             <p>
                                 Galleria laterale: <span class="giallo">1-8 / 18-26</span><br>
                                 Costo: &euro; 42.00
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="1&deg; piano - galleria laterale") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                             <p>
                                 Galleria pre-centrale: <span class="violetto">9 / 17</span><br>
                                 Costo: &euro; 43.50
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="1&deg; piano - galleria pre-centrale") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                             <p>
                                 Galleria centrale: <span class="rosso">10-12 / 14-16</span><br>
                                 Costo: &euro; 45.00
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="1&deg; piano - galleria centrale") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                             <hr>
                             <!--Galleria SECONDO PIANO-->
@@ -117,18 +195,74 @@
                             <p>
                                 Galleria lato palco: <span class="verde">0-4 / 22-26</span><br>
                                 Costo: &euro; 40.00
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="2&deg; piano - galleria lato palco") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                             <p>
                                 Galleria laterale: <span class="giallo">5-8 / 18-21</span><br>
                                 Costo: &euro; 41.50
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="2&deg; piano - galleria laterale") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                             <p>
                                 Galleria pre-centrale: <span class="violetto">9 / 17</span><br>
                                 Costo: &euro; 43.50
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="2&deg; piano - galleria pre-centrale") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                             <p>
                                 Galleria centrale: <span class="rosso">10-16</span><br>
                                 Costo: &euro; 45.00
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="2&deg; piano - galleria centrale") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                         </div>
                         <div class="costi2">
@@ -137,14 +271,56 @@
                             <p>
                                 Galleria lato palco: <span class="blu">0-4 / 22-26</span><br>
                                 Costo: &euro; 38.00
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="3&deg; piano - galleria lato palco") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                             <p>
                                 Galleria laterale: <span class="marrone">5-8 / 18-21</span><br>
                                 Costo: &euro; 40.00
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="3&deg; piano - galleria laterale") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                             <p>
                                 Galleria centrale: <span class="giallo">9-17</span><br>
                                 Costo: &euro; 42.00
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="3&deg; piano - galleria centrale") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                             <hr>
                             <!--Galleria 4° PIANO-->
@@ -152,14 +328,56 @@
                             <p>
                                 Galleria lato palco: <span class="blu">2-4 / 22-24</span><br>
                                 Costo: &euro; 36.00
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="4&deg; piano - galleria lato palco") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                             <p>
                                 Galleria laterale: <span class="marrone">5-8 / 18-21</span><br>
                                 Costo: &euro; 38.00
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="4&deg; piano - galleria laterale") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                             <p>
                                 Galleria centrale: <span class="verde">9-17</span><br>
                                 Costo: &euro; 40.00
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="4&deg; piano - galleria centrale") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                         </div>
                         <div class="costi3">
@@ -168,91 +386,117 @@
                             <p>
                                 Balcone laterale: <span class="blu_scuro">11 posti per lato</span><br>
                                 Costo: &euro; 29.00
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="balcone laterale") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                             <p>
                                 Balcone pre-centrale: <span class="marrone">11 posti per lato</span><br>
                                 Costo: &euro; 30.50
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="balcone pre-centrale") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                             <p>
                                 Balcone centrale: <span class="verde">35 posti</span><br>
                                 Costo: &euro; 32.00
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="balcone centrale") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                             <hr>
                             <!--PLATEA-->
                             <b>Platea</b><br>
                             <p>
                                 File: <span class="rosso">A-Q</span><br>
-                                Costo: &euro; 50
+                                Costo: &euro; 50.00
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="platea | A-Q") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                             <p>
                                 File: <span class="violetto">R-V</span><br>
                                 Costo: &euro; 47.50
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="platea | R-V") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                             <p>
                                 Posti: <span class="blu">Handicap</span><br>
                                 Costo: &euro; 47.50
+                                <br>
+                                <?php
+                                    foreach ($prodotti as $nome=>$prezzo) {
+                                        if($nome=="platea | handicap") {
+                                            echo("
+                                                <button>
+                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                        Aggiungi al carrello
+                                                    </a>
+                                                </button>
+                                            ");
+                                        }
+                                    }
+                                ?>
                             </p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!--COMPRA BIGLIETTI-->
-        <div class="biglietti">
-            <div class="formContainer">
-                <form action="../php/carrello.php" method="post" class="ticketForm">
-                    <h2>Aggiungi al carrello i tuoi biglietti!</h2>
-            
-                    <!-- Selezione della zona -->
-                    <div class="formGroup">
-                        <label for="zona">Zona preferita:</label>
-                        <select id="zona" name="zona" required>
-                            <option value="">-- Seleziona una zona presente nei prezzi --</option>
-                            <!--PLATEA-->
-                            <option value="plateaA">Platea | file A-Q</option>
-                            <option value="plateaI">Platea | file R-V</option>
-                            <option value="plateaH">Platea - handicap</option>
-                            <!--PRIMO PIANO-->
-                            <option value="divisorio">-- PRIMO PIANO --</option>
-                            <option value="galleria1">1&deg; Piano | Galleria laterale</option>
-                            <option value="galleria1_1">1&deg; Piano | Galleria pre-centrale</option>
-                            <option value="galleria1_2">1&deg; Piano | Galleria centrale</option>
-                            <!--SECONDO PIANO-->
-                            <option value="divisorio">-- SECONDO PIANO --</option>
-                            <option value="galleria2">2&deg; Piano | Galleria lato palco</option>
-                            <option value="galleria2_1">2&deg; Piano | Galleria laterale</option>
-                            <option value="galleria2_2">2&deg; Piano | Galleria pre-centrale</option>
-                            <option value="galleria2_3">2&deg; Piano | Galleria centrale</option>
-                            <!--TERZO PIANO-->
-                            <option value="divisorio">-- TERZO PIANO --</option>
-                            <option value="galleria3">3&deg; Piano | Galleria lato palco</option>
-                            <option value="galleria3_1">3&deg; Piano | Galleria laterale</option>
-                            <option value="galleria3_2">3&deg; Piano | Galleria centrale</option>
-                            <!--QUARTO PIANO-->
-                            <option value="divisorio">-- QUARTO PIANO --</option>
-                            <option value="galleria4">4&deg; Piano | Galleria lato palco</option>
-                            <option value="galleria4_1">4&deg; Piano | Galleria laterale</option>
-                            <option value="galleria4_2">4&deg; Piano | Galleria centrale</option>
-                            <!--QUINTO PIANO-->
-                            <option value="divisorio">-- BALCONATA --</option>
-                            <option value="balcone5">Balcone laterale</option>
-                            <option value="balcone5_1">Balcone pre-centrale</option>
-                            <option value="balcone5_2">Balcone centrale</option>
-                        </select>
-                    </div>
-
-                    <!-- Numero di posti -->
-                    <div class="formGroup">
-                        <label for="numeroPosti">Numero di posti:</label>
-                        <input type="number" id="numeroPosti" name="numeroPosti" min="1" max="10" value="1" required>
-                    </div>
-            
-                    <!-- Pulsante di invio -->
-                    <div class="formGroup">
-                        <button type="submit" class="submitButton"><img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/shopping-cart-loaded.png" alt="shopping-cart-loaded"/></button>
-                    </div>
-                </form>
             </div>
         </div>
 

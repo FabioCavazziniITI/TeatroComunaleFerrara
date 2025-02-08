@@ -182,7 +182,7 @@ a {
 .costi p {
     display: block;
     font-size: 19px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .costi .giallo {
@@ -229,7 +229,14 @@ hr {
     margin-bottom: 20px;
 }
 
-/*AGGIUNTA CARRELLO + FORM CARRELLO*/
+/*CARRELLO*/
+.carrello {
+    width: 100%;
+    height: auto;
+    background-color: #F7F3E9;
+    padding-top: 10px;
+}
+
 .biglietti {
     width: 100%;
     height: auto;
@@ -318,14 +325,6 @@ select:focus {
 
 .inlineGroup .formGroup {
     flex: 1;
-}
-
-/*PAGINA CARRELLO*/
-.carrello {
-    width: 100%;
-    height: auto;
-    background-color: #F7F3E9;
-    padding-top: 10px;
 }
 
 /* FOOTER */
