@@ -109,7 +109,7 @@ a {
     transform: scale(0.95); /* Leggera riduzione quando cliccato */
 }
 
-/* CONTENUTO PRENOTA*/
+/* PAGINA PRENOTA*/
 .prenotazione {
     width: 100%;
     height: auto;
@@ -229,7 +229,7 @@ hr {
     margin-bottom: 20px;
 }
 
-/*CARRELLO*/
+/*PAGINA CARRELLO*/
 .carrello {
     width: 100%;
     height: auto;

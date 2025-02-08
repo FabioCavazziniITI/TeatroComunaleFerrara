@@ -14,6 +14,8 @@
 
         if (($user == "Simba21" && $pwd == "HakunaMatata21")||
             ($user == "CapitanoJack" && $pwd == "PerlaNera2025")||
+            ($user == "CapitanAhab" && $pwd == "CacciaBalena99")||
+            ($user == "CodeNinja" && $pwd == "HelloWorld2024")||
             ($user == "ProfCono" && $pwd == "ProfMigliore!")) { //CREDENZIALI ACCESSO
             $_SESSION["active_login"] = $user; // Salva il nome utente nella sessione
             setcookie("NomeUtente", $user, time() + (86400 * 30), "/"); // Crea un cookie valido per 30 giorni
