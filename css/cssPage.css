@@ -11,6 +11,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #2C3E50;
+    color: #D4AF37;
 }
 
 /* LOGO */
@@ -65,7 +66,7 @@ a {
 
 .now {
     transition: none;
-    color: #B22222;
+    color: #ed0334;
 }
 
 .nav ul li a {
@@ -87,10 +88,10 @@ a {
 }
 
 .logout-button {
-    background-color: #B22222; /* Colore principale del pulsante */
-    color: #F7F3E9; /* Colore del testo */
+    background-color: #ed0334;
+    color: #F7F3E9;
     border: none;
-    border-radius: 25px; /* Angoli arrotondati */
+    border-radius: 25px;
     padding: 10px 20px;
     font-size: 1em;
     font-weight: bold;
@@ -100,13 +101,13 @@ a {
 }
 
 .logout-button:hover {
-    background-color: #740000; /* Colore hover */
-    transform: scale(1.05); /* Leggero ingrandimento al passaggio del mouse */
+    background-color: #ff7a92;
+    transform: scale(1.05);
 }
 
 .logout-button:active {
-    background-color: #590000; /* Colore quando il pulsante è premuto */
-    transform: scale(0.95); /* Leggera riduzione quando cliccato */
+    background-color: #a10021;
+    transform: scale(0.95);
 }
 
 /* PAGINA PRENOTA*/
@@ -229,23 +230,154 @@ hr {
     margin-bottom: 20px;
 }
 
-/*PAGINA CARRELLO*/
+.prenotazione .posti button {
+    background-color: #ed0334;
+    color: #F7F3E9;
+    border: none;
+    border-radius: 25px;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.prenotazione .posti button a {
+    color: #F7F3E9;
+    text-decoration: none;
+}
+
+.prenotazione .posti button:hover {
+    background-color: #ff7a92;
+    transform: scale(1.05);
+}
+
+.prenotazione .posti button:active {
+    background-color: #a10021;
+    transform: scale(0.95);
+}
+
+/* PAGINA CARRELLO */
 .carrello {
     width: 100%;
     height: auto;
-    background-color: #F7F3E9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centra il contenuto orizzontalmente */
+    justify-content: center;
     padding-top: 10px;
+    padding-bottom: 100px;
+    background-color: #F7F3E9;
 }
 
-.biglietti {
-    width: 100%;
-    height: auto;
-    align-items: center;
+.carrello table {
+    width: 70%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.carrello th, .carrello td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.carrello td {
+    background-color: #D3D3D3;
+}
+
+.carrello .int {
+    height: 35px;
+    background-color: #2C3E50;
+    font-size: 16pt;
+    color: #D4AF37;
+    border-radius: 10px;
+}
+
+.carrello .content {
+    height: 35px;
+}
+
+.carrello .name,
+.carrello .prezzo,
+.carrello .azioni {
+    text-align: center;
+}
+
+.carrello .name {
+    width: 40%;
+    font-size: 14pt;
+}
+
+.carrello .prezzo,
+.carrello .azioni {
+    width: 15%;
+}
+
+.carrello .prezzo {
+    font-size: 14pt;
+}
+
+.carrello .azioni button {
+    background-color: #ed0334;
+    color: #F7F3E9;
+    border: none;
+    border-radius: 25px;
+    padding: 5px 15px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.carrello .azioni button a {
+    color: #F7F3E9;
+    text-decoration: none;
+}
+
+.carrello .azioni button:hover {
+    background-color: #ff7a92;
+    transform: scale(1.05);
+}
+
+.carrello .azioni button:active {
+    background-color: #a10021;
+    transform: scale(0.95);
+}
+
+.buttons-container {
+    display: flex;
+    gap: 10px;
     justify-content: center;
-    align-content: center;
-    background-color: #F7F3E9;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+.button-carrello {
+    background-color: #ed0334;
+    color: #F7F3E9;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.button-carrello a {
+    color: #F7F3E9;
+    text-decoration: none;
+}
+
+.button-carrello:hover {
+    background-color: #ff7a92;
+    transform: scale(1.05);
+}
+
+.button-carrello:active {
+    background-color: #a10021;
+    transform: scale(0.95);
 }
 
 .formContainer {

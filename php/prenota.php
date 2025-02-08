@@ -147,7 +147,7 @@
                                         if($nome=="1°_piano_galleria-laterale") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -165,7 +165,7 @@
                                         if($nome=="1°_piano_galleria-pre-centrale") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -183,7 +183,7 @@
                                         if($nome=="1°_piano_galleria-centrale") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -204,7 +204,7 @@
                                         if($nome=="2°_piano_galleria-lato-palco") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -222,7 +222,7 @@
                                         if($nome=="2°_piano_galleria-laterale") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -240,7 +240,7 @@
                                         if($nome=="2°_piano_galleria-pre-centrale") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -258,7 +258,7 @@
                                         if($nome=="2°_piano_galleria-centrale") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -280,7 +280,7 @@
                                         if($nome=="3°_piano_galleria-lato-palco") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -298,7 +298,7 @@
                                         if($nome=="3°_piano_galleria-laterale") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -316,7 +316,7 @@
                                         if($nome=="3°_piano_galleria-centrale") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -337,7 +337,7 @@
                                         if($nome=="4°_piano_galleria-lato-palco") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -355,7 +355,7 @@
                                         if($nome=="4°_piano_galleria-laterale") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -373,7 +373,7 @@
                                         if($nome=="4°_piano_galleria-centrale") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -395,7 +395,7 @@
                                         if($nome=="balcone_laterale") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -413,7 +413,7 @@
                                         if($nome=="balcone_pre-centrale") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -431,7 +431,7 @@
                                         if($nome=="balcone_centrale") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -452,7 +452,7 @@
                                         if($nome=="platea_|_A-Q") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -470,7 +470,7 @@
                                         if($nome=="platea_|_R-V") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>
@@ -488,7 +488,7 @@
                                         if($nome=="platea_|_handicap") {
                                             echo("
                                                 <button>
-                                                    <a href=prenota.php?action=add&nome=".$nome." style='color: black;'>
+                                                    <a href=prenota.php?action=add&nome=".$nome.">
                                                         Aggiungi al carrello
                                                     </a>
                                                 </button>

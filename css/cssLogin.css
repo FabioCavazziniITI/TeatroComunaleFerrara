@@ -69,13 +69,13 @@ label {
 }
 
 .login-container input:focus {
-    border-color: #B22222;
+    border-color: #ed0334;
     outline: none;
     box-shadow: 0 0 5px rgba(178, 34, 34, 0.5);
 }
 
 .button {
-    background-color: #B22222;
+    background-color: #ed0334;
     color: #F7F3E9;
     border: none;
     margin-top: 20px;
@@ -88,12 +88,12 @@ label {
 }
 
 .button:hover {
-    background-color: #740000;
+    background-color: #ff7a92;
     transform: scale(1.05);
 }
 
 .button:active {
-    background-color: #590000;
+    background-color: #a10021;
     transform: scale(0.95);
 }
 

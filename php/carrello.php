@@ -94,14 +94,14 @@
                 { 
                     echo ("<table>"); 
                     echo ("
-                            <tr>
-                                <th>
-                                    Nome Prodotto
+                            <tr class='int'>
+                                <th class='name'>
+                                    Nome zona
                                 </th>
-                                <th>
+                                <th class='prezzo'>
                                     Prezzo
                                 </th>
-                                <th>
+                                <th class='azioni'>
                                     Azioni
                                 </th>
                             </tr>
@@ -110,16 +110,16 @@
                     foreach($_SESSION['carrello'] as $nome=>$prezzo)
                     { 
                         echo("
-                                <tr>
-                                    <td>
+                                <tr class='content'>
+                                    <td class='name'>
                                         ".$nome."
                                     </td>
-                                    <td>
+                                    <td class='prezzo'>
                                         € ".$prezzo."
                                     </td>
-                                    <td>
+                                    <td class='azioni'>
                                         <button>
-                                            <a href=carrello.php?action=delete&indice=".$nome." style='color: black;'>
+                                            <a href=carrello.php?action=delete&indice=".$nome.">
                                                 Rimuovi
                                             </a>
                                         </button>
@@ -156,3 +156,31 @@
                 </button>
             </div>
         </div>
+
+        <!--FOOTER-->
+        <div class="footer">
+            <div class="footer_div">
+              <a href="http://www.iiscopernico.edu.it/" target="_blank">
+                <img class="img_footer" src="../img/Stemma_ITI.png" alt="Logo ITI cliccabile">
+              </a>
+              <br>
+              <I>
+                <a href="http://www.iiscopernico.edu.it/" target="_blank">
+                    IIS "N.Copernico - Carpeggiani"
+                </a>
+              </I>
+            </div>
+            <div class="footer_div">
+              &#0169 Cavazzini Fabio
+              <br><br>
+              <a href="mailto:fabio.cavazzini@iticopernico.it">
+                  fabio.cavazzini@iticopernico.it
+              </a>
+              <br><br>
+                Classe V G
+              <br><br>
+                A.S. 2024 - 2025
+            </div>
+          </div>
+    </body>
+</html>
