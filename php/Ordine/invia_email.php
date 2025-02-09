@@ -30,6 +30,7 @@
                     	th, td { border: 1px solid black; padding: 8px; text-align: center; }
                     	th { background-color: #f2f2f2; }
                     	.content td { text-align: left; }
+                        .int { background-color:rgb(163, 163, 163); }
                     </style>
                 </head>
                 <body>
@@ -39,7 +40,7 @@
                     Per eventuali richieste o problematiche, può contattarci all'indirizzo email <u><i style='color:blue;'>info@teatrocomunaleferrara.it</i></u><br><br>
                     
                     <table>
-                        <tr>
+                        <tr class='int'>
                             <th colspan='4'>D E T T A G L I &emsp;&emsp; O R D I N E</th>
                         </tr>
                         <tr>
@@ -57,7 +58,7 @@
                     </table><br>
                     
                     <table>
-                        <tr>
+                        <tr class='int'>
                             <th colspan='3'>D A T I &emsp;&emsp; A N A G R A F I C I</th>
                         </tr>
                         <tr>
@@ -73,7 +74,7 @@
                     </table><br>
                     
                     <table>
-                        <tr>
+                        <tr class='int'>
                             <th colspan='3'>B I G L I E T T I</th>
                         </tr>
                         <tr>
