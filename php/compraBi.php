@@ -154,7 +154,7 @@
                                         ".$nome."
                                     </td>
                                     <td class='quantita'>
-                                        ".$nPosti."
+                                        ".$nPosti." biglietti
                                     </td>
                                     <td class='prezzo'>
                                         € ".$prezzo."
@@ -180,7 +180,7 @@
                             foreach($_SESSION['carrello'] as $nome=>$prezzo) {
                                 $contatore++;
                             }
-                            echo ($nPosti*$contatore);
+                            echo ($nPosti*$contatore. " biglietti");
                         ?>
                     </td>
                 </tr>
@@ -201,8 +201,8 @@
             <div class="buttons-container">
                 <button class="paga">
                 <a href="carrello.php">
-                    Torna al carrello
-                    <img src="https://img.icons8.com/color/48/shopping-cart-loaded.png" alt="shopping-cart-loaded"/>
+                    Annulla ordine
+                    <img src="https://img.icons8.com/plasticine/100/undo.png" alt="undo"/>
                 </a>
                 </button>
                 <button class="paga">
@@ -212,5 +212,32 @@
                     </a>
                 </button>
             </div>
-            
         </div>
+
+        <!--FOOTER-->
+        <div class="footer">
+            <div class="footer_div">
+              <a href="http://www.iiscopernico.edu.it/" target="_blank">
+                <img class="img_footer" src="../img/Stemma_ITI.png" alt="Logo ITI cliccabile">
+              </a>
+              <br>
+              <I>
+                <a href="http://www.iiscopernico.edu.it/" target="_blank">
+                    IIS "N.Copernico - Carpeggiani"
+                </a>
+              </I>
+            </div>
+            <div class="footer_div">
+              &#0169 Cavazzini Fabio
+              <br><br>
+              <a href="mailto:fabio.cavazzini@iticopernico.it">
+                  fabio.cavazzini@iticopernico.it
+              </a>
+              <br><br>
+                Classe V G
+              <br><br>
+                A.S. 2024 - 2025
+            </div>
+          </div>
+    </body>
+</html>
