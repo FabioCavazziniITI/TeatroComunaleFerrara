@@ -207,7 +207,7 @@
                 </button>
                 <button class="paga">
                     <a href="confOrd.php">
-                        Acquista&nbsp;
+                        Acquista biglietti
                         <img src="https://img.icons8.com/color/48/cash-in-hand.png" alt="cash-in-hand"/>
                     </a>
                 </button>
@@ -223,7 +223,7 @@
               <br>
               <I>
                 <a href="http://www.iiscopernico.edu.it/" target="_blank">
-                    IIS "N.Copernico - Carpeggiani"
+                    IIS "N.Copernico - A. Carpeggiani"
                 </a>
               </I>
             </div>

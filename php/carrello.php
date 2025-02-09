@@ -146,11 +146,13 @@
                     <button class="button-carrello">
                         <a href="carrello.php?action=clear">
                             Svuota Carrello
+                            <img src="https://img.icons8.com/ios/50/clear-shopping-cart.png" alt="clear-shopping-cart"/>
                         </a>
                     </button>
                     <button class="button-carrello">
                         <a href="prenota.php">
-                            Torna alla lista dei posti
+                            Torna alla lista<br>dei posti
+                            <img src="https://img.icons8.com/ios/50/ingredients-list.png" alt="ingredients-list"/>
                         </a>
                     </button>
                 </div>
@@ -211,7 +213,7 @@
               <br>
               <I>
                 <a href="http://www.iiscopernico.edu.it/" target="_blank">
-                    IIS "N.Copernico - Carpeggiani"
+                IIS "N.Copernico - A. Carpeggiani"
                 </a>
               </I>
             </div>

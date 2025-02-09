@@ -146,7 +146,7 @@
               <br>
               <I>
                 <a href="http://www.iiscopernico.edu.it/" target="_blank">
-                    IIS "N.Copernico - Carpeggiani"
+                IIS "N.Copernico - A. Carpeggiani"
                 </a>
               </I>
             </div>

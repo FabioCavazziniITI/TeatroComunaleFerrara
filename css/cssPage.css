@@ -372,11 +372,16 @@ hr {
     transition: background-color 0.4s ease, transform 0.2s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button-carrello a {
     color: #F7F3E9;
     text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 .button-carrello:hover {
@@ -387,6 +392,12 @@ hr {
 .button-carrello:active {
     background-color: #a10021;
     transform: scale(0.95);
+}
+
+.button-carrello a img {
+    width: 35px;
+    height: 35px;
+    margin-left: 8px;
 }
 
 .formCarrello {
@@ -472,8 +483,8 @@ input:focus {
 }
 
 .submitButton img {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
 }
 
 .inlineGroup {
@@ -571,6 +582,7 @@ input:focus {
 }
 
 .buttons-container {
+    width: 23%;
     display: flex;
     gap: 50px;
     justify-content: center;
@@ -578,7 +590,6 @@ input:focus {
 }
 
 .paga {
-    width: 100%;
     background-color: #ed0334;
     color: #F7F3E9;
     border: none;
@@ -611,9 +622,10 @@ input:focus {
 }
 
 .paga img {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     text-align: center;
+    margin-left: 8px;
 }
 
 /* FOOTER */
