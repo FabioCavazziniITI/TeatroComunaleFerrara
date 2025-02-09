@@ -181,14 +181,6 @@
                         </form>
                     </td>
                     <td>
-                        <!-- Bottone per inviare l'email -->
-                        <form method="POST" action="Ordine/invia_mess.php">
-                            <button type="submit" name="invia_email">
-                                Invia messaggio dell'ordine
-                            </button>
-                        </form>
-                    </td>
-                    <td>
                         <!-- Bottone per generare il PDF -->
                         <form method="POST" action="Ordine/genera_pdf.php">
                             <button type="submit" name="genera_pdf">
