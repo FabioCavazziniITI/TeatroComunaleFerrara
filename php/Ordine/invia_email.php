@@ -120,7 +120,7 @@
                 </body>
             </html>";
             
-            // Definisci gli headers per l'email
+            //Headers email
             $headers = "Content-Type: text/html; charset=UTF-8" . "\r\n"; //indica che si tratta di un contenuto html
             $headers .= "From: conferma-ordine@noreplyteatrocomunaleferrara.it" . "\r\n";
             $headers .= "Reply-To: info@teatrocomunaleferrara.it" . "\r\n"; 
