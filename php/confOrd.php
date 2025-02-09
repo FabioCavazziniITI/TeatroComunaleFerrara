@@ -54,8 +54,8 @@
             <?php                
                 //saluto utente
                 echo ("Gentile ".$nome." ".$cognome.",<br>
-                        l'ordine da lei effettuato è avvenuto con successo!<br><br>
-                        Di seguito può trovare i dettagli dell'ordine:<br>");
+                        l'ordine da Lei effettuato è avvenuto con successo!<br><br>
+                        Per eventuali richieste e problematiche, può contattarci all'indirizzo email <u><i style='color:blue;'>info@teatrocomunaleferrara.it</i></u><br>");
             ?>
             <table class="table1">
                 <tr>
@@ -175,12 +175,12 @@
             <table>
                 <tr>
                     <th colspan="2">
-                        Come si desiderano conservare i dati
+                        Come si desidera conservare l'ordine effettuato?
                     </th>
                 </tr>
                 <tr>
                     <th>
-                        Voglio riceverli via email
+                        Voglio riceverlo via email
                     </th>
                     <th>
                         Voglio scaricare il PDF
