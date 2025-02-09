@@ -20,8 +20,6 @@
     else {
         $user = "Utente non identificato";
     }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -154,8 +152,55 @@
                         Torna alla lista dei posti
                     </a>
                 </button>
+                <button class="button-carrello">
+                    <a href="compraBi.php">
+                        Procedi con gli acquisti
+                    </a>
+                </button>
             </div>
         </div>
+
+        <div class="formCarrello">
+            <div class="formContainer">
+                    <form action="../php/biglietti.php" method="post" class="ticketForm">
+                        <h2>Acquista ora i tuoi biglietti</h2>
+                
+                        <!-- Generalità del compratore -->
+                        <div class="inlineGroup">
+                            <div class="formGroup">
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome" required>
+                            </div>
+                
+                            <div class="formGroup">
+                                <label for="cognome">Cognome:</label>
+                                <input type="text" id="cognome" name="cognome" placeholder="Inserisci il tuo cognome" required>
+                            </div>
+                        </div>
+                
+                        <div class="formGroup">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
+                        </div>
+                
+                        <div class="formGroup">
+                            <label for="cellulare">Cellulare:</label>
+                            <input type="text" id="cellulare" name="cellulare" placeholder="Inserisci il tuo numero di telefono" required>
+                        </div>
+                
+                        <!-- Numero di posti -->
+                        <div class="formGroup">
+                            <label for="numeroPosti">Numero di posti:</label>
+                            <input type="number" id="numeroPosti" name="numeroPosti" min="1" max="10" value="1" required>
+                        </div>
+                
+                        <!-- Pulsante di invio -->
+                        <div class="formGroup">
+                            <button type="submit" class="submitButton">Acquista</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
         <!--FOOTER-->
         <div class="footer">
