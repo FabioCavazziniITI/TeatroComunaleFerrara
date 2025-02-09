@@ -86,83 +86,79 @@
         </div>
 
         <!--CONTENUTO-->
-        <div class="carrello">
-            <?php
-                function mostra()
-                { 
-                    echo ("<table>"); 
-                    echo ("
-                            <tr class='int'>
-                                <th class='name'>
-                                    Nome zona
-                                </th>
-                                <th class='prezzo'>
-                                    Prezzo
-                                </th>
-                                <th class='azioni'>
-                                    Azioni
-                                </th>
-                            </tr>
-                        ");
-
-                    foreach($_SESSION['carrello'] as $nome=>$prezzo)
+        <div class="contenutoCarrello">
+            <div class="carrello">
+                <?php
+                    function mostra()
                     { 
-                        echo("
-                                <tr class='content'>
-                                    <td class='name'>
-                                        ".$nome."
-                                    </td>
-                                    <td class='prezzo'>
-                                        € ".$prezzo."
-                                    </td>
-                                    <td class='azioni'>
-                                        <button>
-                                            <a href=carrello.php?action=delete&indice=".$nome.">
-                                                Rimuovi
-                                            </a>
-                                        </button>
-                                    </td>
+                        echo ("<table>"); 
+                        echo ("
+                                <tr class='int'>
+                                    <th class='name'>
+                                        Nome zona
+                                    </th>
+                                    <th class='prezzo'>
+                                        Prezzo
+                                    </th>
+                                    <th class='azioni'>
+                                        Azioni
+                                    </th>
                                 </tr>
-                            "); 
-                    } 
-                    echo ("</table>"); 
-                } 
+                            ");
 
-                if (isset($_GET['action'])) { 
-                    if($_GET['action']=="clear") { 
-                        unset ($_SESSION['carrello']); 
+                        foreach($_SESSION['carrello'] as $nome=>$prezzo)
+                        { 
+                            echo("
+                                    <tr class='content'>
+                                        <td class='name'>
+                                            ".$nome."
+                                        </td>
+                                        <td class='prezzo'>
+                                            € ".$prezzo."
+                                        </td>
+                                        <td class='azioni'>
+                                            <button>
+                                                <a href=carrello.php?action=delete&indice=".$nome.">
+                                                    Rimuovi
+                                                </a>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                "); 
+                        } 
+                        echo ("</table>"); 
                     } 
-                    if ($_GET['action']=="delete") { 
-                        unset($_SESSION['carrello'][$_GET['indice']]);
-                        mostra(); 
-                    } 
-                } else {
-                    mostra();
-                } 
-            ?>
 
-            <div class="buttons-container">
-                <button class="button-carrello">
-                    <a href="carrello.php?action=clear">
-                        Svuota Carrello
-                    </a>
-                </button>
-                <button class="button-carrello">
-                    <a href="prenota.php">
-                        Torna alla lista dei posti
-                    </a>
-                </button>
-                <button class="button-carrello">
-                    <a href="compraBi.php">
-                        Procedi con gli acquisti
-                    </a>
-                </button>
+                    if (isset($_GET['action'])) { 
+                        if($_GET['action']=="clear") { 
+                            unset ($_SESSION['carrello']); 
+                        } 
+                        if ($_GET['action']=="delete") { 
+                            unset($_SESSION['carrello'][$_GET['indice']]);
+                            mostra(); 
+                        } 
+                    } else {
+                        mostra();
+                    } 
+                ?>
+
+                <div class="buttons-container">
+                    <button class="button-carrello">
+                        <a href="carrello.php?action=clear">
+                            Svuota Carrello
+                        </a>
+                    </button>
+                    <button class="button-carrello">
+                        <a href="prenota.php">
+                            Torna alla lista dei posti
+                        </a>
+                    </button>
+                </div>
             </div>
-        </div>
 
-        <div class="formCarrello">
-            <div class="formContainer">
-                    <form action="../php/biglietti.php" method="post" class="ticketForm">
+            <div class="formCarrello">
+                <div class="formContainer">
+                    <form action="../php/compraBi.php" method="post" class="ticketForm">
                         <h2>Acquista ora i tuoi biglietti</h2>
                 
                         <!-- Generalità del compratore -->
@@ -190,17 +186,21 @@
                 
                         <!-- Numero di posti -->
                         <div class="formGroup">
-                            <label for="numeroPosti">Numero di posti:</label>
+                            <label for="numeroPosti">Numero di biglietti da acquistare per ogni zona scelta:</label>
                             <input type="number" id="numeroPosti" name="numeroPosti" min="1" max="10" value="1" required>
                         </div>
                 
                         <!-- Pulsante di invio -->
                         <div class="formGroup">
-                            <button type="submit" class="submitButton">Acquista</button>
+                            <button type="submit" class="submitButton">
+                                Procedi con l'acquisto
+                                <img src="https://img.icons8.com/color/48/shopping-cart-loaded.png" alt="shopping-cart-loaded"/>
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
+        </div>
 
         <!--FOOTER-->
         <div class="footer">

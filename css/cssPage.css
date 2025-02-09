@@ -257,6 +257,16 @@ hr {
 }
 
 /* PAGINA CARRELLO */
+.contenutoCarrello {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #F7F3E9;
+}
+
 .carrello {
     width: 100%;
     height: auto;
@@ -380,6 +390,8 @@ hr {
 }
 
 .formCarrello {
+    height: auto;
+    padding-top: 20px;
     background-color: #F7F3E9;
 }
 
@@ -417,8 +429,7 @@ label {
 
 input[type="text"],
 input[type="email"],
-input[type="number"],
-select {
+input[type="number"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #D4AF37;
@@ -429,16 +440,15 @@ select {
     color: #333;
 }
 
-input:focus,
-select:focus {
-    border-color: #B22222;
+input:focus {
+    border-color: #ed0334;
     outline: none;
     box-shadow: 0 0 5px rgba(178, 34, 34, 0.5);
 }
 
 .submitButton {
     width: 100%;
-    background-color: #B22222;
+    background-color: #ed0334;
     color: #F7F3E9;
     border: none;
     padding: 10px 20px;
@@ -447,10 +457,24 @@ select:focus {
     font-weight: bold;
     font-size: 1em;
     transition: background-color 0.4s ease;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.submitButton:hover {
+    background-color: #ff7a92;
 }
 
-.submitButton:hover {
-    background-color: #740000;
+.submitButton:active {
+    background-color: #a10021;
+    transform: scale(0.95);
+}
+
+.submitButton img {
+    width: 50px;
+    height: 50px;
 }
 
 .inlineGroup {
