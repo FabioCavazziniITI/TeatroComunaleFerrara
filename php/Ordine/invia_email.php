@@ -16,11 +16,11 @@
         	$nPostiTOT = $_SESSION['nPostiTOT'];
         	$costoTOT = $_SESSION['costoTOT'];
         	
-        	// Definisci i destinatari e l'oggetto dell'email
-        	$to = $email; // L'email del cliente
+        	//DESTINATARI + OGGETTO
+        	$to = $email;
         	$subject = "CONFERMA ORDINE N° " . $numeroSicuro;
         	
-        	// Definisci il corpo del messaggio in HTML
+        	//CORPO
         	$message = "
         	<html>
             	<head>
@@ -98,11 +98,9 @@
             </html>";
             
             // Definisci gli headers per l'email
-            $headers = "MIME-Version: 1.0" . "\r\n";
-            $headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n";
-            $headers .= "From: confermaordine@noreplyteatrocomunaleferrara.it" . "\r\n";
+            $headers = "Content-Type: text/html; charset=UTF-8" . "\r\n"; //indica che si tratta di un contenuto html
+            $headers .= "From: conferma-ordine@noreplyteatrocomunaleferrara.it" . "\r\n";
             $headers .= "Reply-To: info@teatrocomunaleferrara.it" . "\r\n"; 
-            $headers .= "X-Mailer: PHP/" . phpversion();
             
             // Invia l'email
             if (mail($to, $subject, $message, $headers)) {
