@@ -1,6 +1,8 @@
 <?php
 	session_start();
 
+    //var_dump($_SESSION["active_login"]);
+
     // Nel caso in cui l'utente abbia già fatto il login
     if (isset($_SESSION["active_login"])) {
         header("Location: index.php");

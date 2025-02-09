@@ -1,11 +1,33 @@
+<?php
+    session_start();
+
+    if (isset($_POST["logout"])) {
+        unset($_SESSION["active_login"]);
+        setcookie("NomeUtente", "", time() - 3600, "/"); // Elimina il cookie impostandone la scadenza nel passato
+        header("Location: ../../login.php");
+        exit;
+    }
+
+    if (!isset($_SESSION["active_login"])) {
+        header("Location: ../../login.php");
+        exit;
+    }
+
+    // Controlla se il cookie è impostato
+    if (isset($_COOKIE["NomeUtente"])) {
+        $user = $_COOKIE["NomeUtente"];
+    }
+    else {
+        $user = "Utente non identificato";
+    }
+?>
+
 <html>
 	<head>
     	<title>Email di Conferma Ordine</title>
     </head>
     <body>
-    	<?php
-        	session_start();
-        	
+    	<?php        	
         	// Recupera i dati dalla sessione
         	$nome = $_SESSION['nome'];
         	$cognome = $_SESSION['cognome'];
