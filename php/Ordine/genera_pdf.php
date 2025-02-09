@@ -123,7 +123,7 @@
         foreach ($_SESSION['carrello'] as $zona => $prezzo) {
             $pdf->Cell($col1, 10, $zona, 1);
             $pdf->Cell($col2, 10, $nPosti . ' biglietti', 1);
-            $pdf->Cell($col3, 10, "€ " . $prezzo, 1);
+            $pdf->Cell($col3, 10, "€ " . $prezzo*$nPosti, 1);
             $pdf->Ln();
         }
 

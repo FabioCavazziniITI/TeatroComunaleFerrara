@@ -149,7 +149,7 @@
                                         ".$nPosti." biglietti
                                     </td>
                                     <td>
-                                        € ".$prezzo."
+                                        € ".$prezzo*$nPosti."
                                     </td>
                                 </tr>
                             "); 

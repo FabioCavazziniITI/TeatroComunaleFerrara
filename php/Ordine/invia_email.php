@@ -111,7 +111,7 @@
                             <tr class='content'>
                                 <td>".$nome."</td>
                                 <td>".$nPosti." biglietti</td>
-                                <td>€ ".$prezzo."</td>
+                                <td>€ ".$prezzo*$nPosti."</td>
                             </tr>";
                         }
 
