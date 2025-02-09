@@ -29,6 +29,13 @@
     $nPosti		=	$_POST["numeroPosti"];
     $costoTOT	=	0;
     $contatore  =   0;
+
+    // Salva i valori in sessione per PHP2
+    $_SESSION['nome'] = $nome;
+    $_SESSION['cognome'] = $cognome;
+    $_SESSION['email'] = $email;
+    $_SESSION['cellulare'] = $cellulare;
+    $_SESSION['nPosti'] = $nPosti;
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +91,7 @@
                         </a>
                     </li>
                     <li>
-                        <form action="prenota.php" method="POST">
+                        <form action="compraBi.php" method="POST">
                             <input type="submit" class="logout-button" name="logout" value="Logout">
                         </form>
                     </li>
@@ -157,7 +164,7 @@
                                         ".$nPosti." biglietti
                                     </td>
                                     <td class='prezzo'>
-                                        € ".$prezzo."
+                                        € ".$prezzo*$nPosti."
                                     </td>
                                 </tr>
                             "); 
@@ -180,6 +187,7 @@
                             foreach($_SESSION['carrello'] as $nome=>$prezzo) {
                                 $contatore++;
                             }
+                            $_SESSION['nPostiTOT'] =$nPosti*$contatore;
                             echo ($nPosti*$contatore. " biglietti");
                         ?>
                     </td>
@@ -193,24 +201,25 @@
                             foreach ($_SESSION['carrello'] as $nome => $prezzo) {
                                 $costoTOT += $prezzo*$nPosti;
                             }
+                            $_SESSION['costoTOT'] = $costoTOT;
                             echo ("€ ".$costoTOT);
                         ?>
                     </td>
                 </tr>
             </table>
             <div class="buttons-container">
-                <button class="paga">
-                <a href="carrello.php">
-                    Annulla ordine
-                    <img src="https://img.icons8.com/plasticine/100/undo.png" alt="undo"/>
-                </a>
-                </button>
-                <button class="paga">
-                    <a href="confOrd.php">
-                        Acquista biglietti
-                        <img src="https://img.icons8.com/color/48/cash-in-hand.png" alt="cash-in-hand"/>
+                <button type="submit" class="paga">
+                    <a href="carrello.php">
+                        Annulla ordine
+                        <img src="https://img.icons8.com/plasticine/100/undo.png" alt="undo"/>
                     </a>
                 </button>
+                <form action="confOrd.php" method="POST">
+                    <button class="paga">
+                        Acquista biglietti
+                        <img src="https://img.icons8.com/color/48/cash-in-hand.png" alt="cash-in-hand"/>
+                    </button>
+                </form>
             </div>
         </div>
 

@@ -77,7 +77,7 @@
                         </a>
                     </li>
                     <li>
-                        <form action="prenota.php" method="POST">
+                        <form action="carrello.php" method="POST">
                             <input type="submit" class="logout-button" name="logout" value="Logout">
                         </form>
                     </li>

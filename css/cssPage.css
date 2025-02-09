@@ -496,7 +496,7 @@ input:focus {
     flex: 1;
 }
 
-/* PAGINACOMPRA BIGLIETTI */
+/* PAGINA COMPRA BIGLIETTI */
 .compraBiglietti {
     height: auto;
     display: flex;
@@ -626,6 +626,67 @@ input:focus {
     height: 35px;
     text-align: center;
     margin-left: 8px;
+}
+
+/* PAGINA CONFERMA ORDINE */
+.contenitorePHP {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: white;
+    padding-left: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+b {
+    font-size: 28pt;
+    color: #333;
+}
+
+.contenitorePHP .table1 {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.contenitorePHP .table1 th,
+.contenitorePHP .table1 td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    width: 12.5%;
+}
+
+.contenitorePHP .table1 th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.contenitorePHP .table1 tr.content td {
+    background-color: #fff;
+}
+
+.contenitorePHP table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.contenitorePHP th,
+.contenitorePHP td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    width: 33.33%;
+}
+
+.contenitorePHP th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.contenitorePHP tr.content td {
+    background-color: #fff;
 }
 
 /* FOOTER */
