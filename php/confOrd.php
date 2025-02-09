@@ -1,18 +1,6 @@
 <?php
     session_start();
 
-    if (isset($_POST["logout"])) {
-        unset($_SESSION["active_login"]);
-        setcookie("NomeUtente", "", time() - 3600, "/");
-        header("Location: ../login.php");
-        exit;
-    }
-
-    if (!isset($_SESSION["active_login"])) {
-        header("Location: ../login.php");
-        exit;
-    }
-
     // Recupera i valori dalla sessione
     $nome = $_SESSION['nome'];
     $cognome = $_SESSION['cognome'];
@@ -22,13 +10,15 @@
     $nPostiTOT = $_SESSION['nPostiTOT'];
     $costoTOT = $_SESSION['costoTOT'];
 
-    // Controlla se il cookie è impostato
-    if (isset($_COOKIE["NomeUtente"])) {
-        $user = $_COOKIE["NomeUtente"];
-    } else {
-        $user = "Utente non identificato";
+    // Funzione per generare un numero sicuro
+    function generaNumeroSicuro($min, $max) {
+        return random_int($min, $max);
     }
+
+    $numeroSicuro = generaNumeroSicuro(1, 10000);
+    $_SESSION['numeroSicuro'] = $numeroSicuro;
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -43,11 +33,6 @@
         <div class="contenitorePHP">
             <b>
                 <?php
-                    function generaNumeroSicuro($min, $max) {
-                        return random_int($min, $max);
-                    }
-                    
-                    $numeroSicuro = generaNumeroSicuro(1, 10000);
                     echo ("CONFERMA ORDINE N&deg; ".$numeroSicuro);
                 ?>
             </b><br><br>
@@ -55,7 +40,7 @@
                 //saluto utente
                 echo ("Gentile ".$nome." ".$cognome.",<br>
                         l'ordine da Lei effettuato è avvenuto con successo!<br><br>
-                        Per eventuali richieste e problematiche, può contattarci all'indirizzo email <u><i style='color:blue;'>info@teatrocomunaleferrara.it</i></u><br>");
+                        Per eventuali richieste o problematiche, può contattarci all'indirizzo email <u><i style='color:blue;'>info@teatrocomunaleferrara.it</i></u><br>");
             ?>
             <table class="table1">
                 <tr>
@@ -183,15 +168,25 @@
                         Voglio riceverlo via email
                     </th>
                     <th>
-                        Voglio scaricare il PDF
+                        Voglio scaricarlo in formato PDF
                     </th>
                 </tr>
                 <tr class='content'>
                     <td>
-                        ".$nome."
+                        <!-- Bottone per inviare l'email -->
+                        <form method="POST" action="Ordine/invia_email.php">
+                            <button type="submit" name="invia_email">
+                                Invia email dell'ordine
+                            </button>
+                        </form>
                     </td>
                     <td>
-                        ".$nPosti." biglietti
+                        <!-- Bottone per generare il PDF -->
+                        <form method="POST" action="Ordine/genera_pdf.php">
+                            <button type="submit" name="genera_pdf">
+                                Genera PDF dell'ordine
+                            </button>
+                        </form>
                     </td>
                 </tr>
             </table>
