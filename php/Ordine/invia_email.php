@@ -105,7 +105,7 @@
                             <th>Prezzo</th>
                         </tr>";
 
-                        // Aggiungi i dettagli dei biglietti
+                        //Dettagli biglietti
                         foreach ($_SESSION['carrello'] as $nome => $prezzo) {
                             $message .= "
                             <tr class='content'>
