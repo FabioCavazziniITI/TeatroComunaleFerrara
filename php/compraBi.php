@@ -206,7 +206,7 @@
                 </a>
                 </button>
                 <button class="paga">
-                    <a href="prenota.php">
+                    <a href="confOrd.php">
                         Acquista&nbsp;
                         <img src="https://img.icons8.com/color/48/cash-in-hand.png" alt="cash-in-hand"/>
                     </a>
