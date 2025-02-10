@@ -1,0 +1,25 @@
+CREDENZIALI LOGIN PER https://fcavazzini.altervista.org/Scuola/sitiWeb/TeatroComunaleFerrara/index.php
+
+CREDENZIALI 1 - Il Re Leone
+user    →   Simba21
+pwd     →   HakunaMatata21
+
+
+CREDENZIALI 2 - Pirati dei Caraibi
+user    →   CapitanoJack
+pwd     →   PerlaNera2025
+
+
+CREDENZIALI 3 - Moby Dick
+user    →   CapitanAhab
+pwd     →   CacciaBalena99
+
+
+CREDENZIALI 4 - Informatico
+user    →   CodeNinja
+pwd     →   HelloWorld2024
+
+
+CREDENZIALI 5 - Prof
+user    →   ProfCono
+pwd     →   ProfMigliore!
