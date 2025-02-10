@@ -105,7 +105,7 @@
                             <th>Prezzo</th>
                         </tr>";
 
-                        //Dettagli biglietti
+                        // Aggiungi i dettagli dei biglietti
                         foreach ($_SESSION['carrello'] as $nome => $prezzo) {
                             $message .= "
                             <tr class='content'>
@@ -120,7 +120,7 @@
                 </body>
             </html>";
             
-            //Headers email
+            // Definisci gli headers per l'email
             $headers = "Content-Type: text/html; charset=UTF-8" . "\r\n"; //indica che si tratta di un contenuto html
             $headers .= "From: conferma-ordine@noreplyteatrocomunaleferrara.it" . "\r\n";
             $headers .= "Reply-To: info@teatrocomunaleferrara.it" . "\r\n"; 

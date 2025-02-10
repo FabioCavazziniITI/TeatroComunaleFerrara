@@ -10,7 +10,7 @@
         exit;
     }
 
-    if (!isset($_SESSION["active_login"])) {
+    if ((!isset($_SESSION["active_login"])) && (!isset($_COOKIE["NomeUtente"]))) {
         header("Location: login.php");
         exit;
     }
