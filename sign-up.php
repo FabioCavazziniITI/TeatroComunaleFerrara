@@ -13,35 +13,48 @@
     if (isset($_POST["submit"])) {
         $user = $_POST["username"];
         $pwd = $_POST["password"];
-
+    
         global $conn;
-
-        $conn = new mysqli("localhost","root","","my_fcavazzini");
-
-        if($conn->connect_error) {
-            die("Connection failed: ".$conn->connect_error);
+    
+        $conn = new mysqli("localhost", "root", "", "my_fcavazzini");
+    
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
         }
-
-        $sql = "SELECT * FROM Login;";
-        $result = $conn -> query($sql); //metodo query per eseguire la query
-
-        if($result->num_rows>0) {
-            //stampa dati
-            while($row = $result->fetch_assoc()) {
-                if($row["Usurname"] === $user && $row["Password"] === $pwd) {
-                    $_SESSION["active_login"] = $user; // Salva il nome utente nella sessione
-                    setcookie("NomeUtente", $user, time() + (86400 * 30), "/"); // Crea un cookie valido per 30 giorni
-                    header("Location: index.php"); // Reindirizza alla home page
-                    exit;
-                }
-                else {
-                    $error = "Utente già iscritto, procevedere con il login!";
+    
+        $sql = "SELECT * FROM Login";
+        $result = $conn->query($sql);
+    
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                if ($row["Usurname"] === $user && $row["Password"] === $pwd) {
+                    $error = "Utente già iscritto, procedere con il login!";
+                    break;
                 }
             }
         }
-
+    
+        // Se non si è trovato l'utente già registrato, procedi con l'inserimento
+        if (!isset($error)) {
+            $sql = "INSERT INTO Login(Usurname, Password)
+                    VALUES ('" . $user . "','" . $pwd . "')";
+            
+            if ($conn->query($sql) === TRUE) {
+                $_SESSION["active_login"] = $user; // Salva il nome utente nella sessione
+                setcookie("NomeUtente", $user, time() + (86400 * 30), "/"); // Crea un cookie valido per 30 giorni
+                header("Location: index.php"); // Reindirizza alla home page
+                exit;
+            }
+            else {
+                echo ("Errore: " . $sql . "<br>" . $conn->error);
+            }
+        }
+        else {
+            $error = "Utente già presente nel sistema.<br>Procedere con il login!";
+        }
+    
         $conn->close();
-    }
+    }    
 ?>
 
 <!DOCTYPE html>

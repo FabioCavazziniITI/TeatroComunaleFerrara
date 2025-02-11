@@ -35,9 +35,12 @@
                     exit;
                 }
                 else {
-                    $error = "Username o Password errati.";
+                    $error = "Account non registrato nel sistema.<br>Procedere con il Sign-Up!";
                 }
             }
+        }
+        else {
+            $error = "Account non registrato nel sistema.<br>Procedere con il Sign-Up!";
         }
 
         $conn->close();
