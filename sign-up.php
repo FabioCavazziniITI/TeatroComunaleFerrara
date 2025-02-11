@@ -35,7 +35,7 @@
                     exit;
                 }
                 else {
-                    $error = "Username o Password errati.";
+                    $error = "Utente già iscritto, procevedere con il login!";
                 }
             }
         }
@@ -50,8 +50,9 @@
         <link rel="icon" href="https://www.teatrocomunaleferrara.it/wp-content/uploads/Teatro-comunale-di-Ferrara-logo-bianco.svg">
         <!--<link rel="stylesheet" type="text/css" href="css/cssLogin.css" media="all">-->
         <title>
-            Teatro Comunale Ferrara - Login
+            Teatro Comunale Ferrara - Sign-Up
         </title>
+        
         <style>
             * {
                 margin: 0;
@@ -196,12 +197,12 @@
                     <h1>
                         Teatro Comunale Ferrara<br>
                         <p>
-                            Login
+                            Sign-Up
                         </p>
                     </h1>
                     <img src="https://www.teatrocomunaleferrara.it/wp-content/uploads/Teatro-comunale-di-Ferrara-logo-bianco.svg" alt="Logo Teatro Comunale Ferrara">
                 </div>
-                <form action="login.php" method="post">
+                <form action="sign-up.php" method="post">
                     <label>
                         Username
                     </label>
@@ -210,13 +211,13 @@
                         Password
                     </label>
                     <input type="password" name="password" placeholder="Password" required>
-                    <input type="submit" class="button" name="submit" value="Login">
+                    <input type="submit" class="button" name="submit" value="Sign-Up">
                     <div class="header-title-opp">
                         <p>
                             Oppure
                         </p>
                     </div>
-                    <input type="button" class="button-opp" value="Sign-Up" onclick="window.location.href='sign-up.php';">
+                    <input type="button" class="button-opp" value="Login" onclick="window.location.href='login.php';">
                     <!--Messaggio di errore-->
                     <?php
                         if (isset($error)) {
