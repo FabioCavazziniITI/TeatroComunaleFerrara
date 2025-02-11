@@ -14,19 +14,33 @@
         $user = $_POST["username"];
         $pwd = $_POST["password"];
 
-        if (($user == "Simba21" && $pwd == "HakunaMatata21")||
-            ($user == "CapitanoJack" && $pwd == "PerlaNera2025")||
-            ($user == "CapitanAhab" && $pwd == "CacciaBalena99")||
-            ($user == "CodeNinja" && $pwd == "HelloWorld2024")||
-            ($user == "ProfCono" && $pwd == "ProfMigliore!")) { //CREDENZIALI ACCESSO
-            $_SESSION["active_login"] = $user; // Salva il nome utente nella sessione
-            setcookie("NomeUtente", $user, time() + (86400 * 30), "/"); // Crea un cookie valido per 30 giorni
-            header("Location: index.php"); // Reindirizza alla home page
-            exit;
+        global $conn;
+
+        $conn = new mysqli("localhost","root","","my_fcavazzini");
+
+        if($conn->connect_error) {
+            die("Connection failed: ".$conn->connect_error);
         }
-        else {
-            $error = "Username o Password errati.";
+
+        $sql = "SELECT * FROM Login;";
+        $result = $conn -> query($sql); //metodo query per eseguire la query
+
+        if($result->num_rows>0) {
+            //stampa dati
+            while($row = $result->fetch_assoc()) {
+                if($row["Usurname"] === $user && $row["Password"] === $pwd) {
+                    $_SESSION["active_login"] = $user; // Salva il nome utente nella sessione
+                    setcookie("NomeUtente", $user, time() + (86400 * 30), "/"); // Crea un cookie valido per 30 giorni
+                    header("Location: index.php"); // Reindirizza alla home page
+                    exit;
+                }
+                else {
+                    $error = "Username o Password errati.";
+                }
+            }
         }
+
+        $conn->close();
     }
 ?>
 
